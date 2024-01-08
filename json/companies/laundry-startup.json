@@ -9,18 +9,18 @@
             "riskMass_description": "There's risk due to a product market fit focus with little to no thought on risk reduction.",
             "teamCapacity": {
                 "GRC": 20,
-                "CorpSec": 0,
-                "ProdSec": 0,
-                "SOC": 0,
-                "Privacy": 0,
-                "IncidentResponse": 0,
+                "corpSec": 5,
+                "prodSec": 5,
+                "SOC": 5,
+                "privacy": 3,
+                "incidentResponse": 2,
                 "_description": "The hours per week (on average) the security team can invest in starts at what the CISO can contribute. Goes up with hiring."
             }
         },
         "business": {
             "employeesEngineering": 10,
             "employeesNonEngineering": 50,
-            "annualSecurityBudget": 500000,
+            "annualSecurityBudget": 150000,
             "securityCosts": {
                 "dollarsAnnually": {
                     "perEngineer": 0,

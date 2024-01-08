@@ -1,5 +1,6 @@
 {
     "description": "AV or EDR on computers at a cost of $50/computer.", 
+    "limit": 1,
     "metrics": {
         "security": {
             "fashion": 5,
@@ -7,13 +8,13 @@
             "riskMass": 0,
             "teamCapacity": {
                 "GRC": 0,
-                "CorpSec": 1,
-                "CorpSec_ImpactDescription": "Takes time to manage solution configuration",
-                "ProdSec": 0,
+                "corpSec": 1,
+                "corpSec_ImpactDescription": "Takes time to manage solution configuration",
+                "prodSec": 0,
                 "SOC": 0,
-                "IncidentResponse": 5,
-                "IncidentResponse_ImpactDescription": "Guaranteed to generate alerts that require security team review and response",
-                "Privacy": 0
+                "incidentResponse": 5,
+                "incidentResponse_ImpactDescription": "Guaranteed to generate alerts that require security team review and response",
+                "privacy": 0
             }
         },
         "business": {
