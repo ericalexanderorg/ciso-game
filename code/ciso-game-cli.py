@@ -49,7 +49,7 @@ def select_file(directory, investments=[]):
 
     # return the filename in the directory
     if choice is 0:
-        return "r"
+        return "goBack"
     else:
         return files[choice - 1]
 
@@ -105,9 +105,9 @@ def main():
     clear_screen()
     prompt = """Welcome to the CISO game!
 
-CISOs are in high demand. You've received offers from the following companies. 
+You're in high demand and have received offers from the following companies. 
 
-Enter the corresponding number for the company you'd like to start working for. 
+Enter the corresponding number for the company you'd like accept the job of CISO at.
 
 """
     print(prompt)
@@ -118,32 +118,43 @@ Enter the corresponding number for the company you'd like to start working for.
     clear_screen()
     print(company_data['firstDayPrompt'])
     print("")
+    print(f"We currently have {company_data['metrics']['business']['customerCount']} customers and expect to grow new customers by 100% YOY")
+    print("")
+    print("We currently run all of our infra in AWS")
+    print("")
     budget = company_data['metrics']['business']['annualSecurityBudget']
     spent = invested(company_data)
     remaining = budget - spent
     while spent < budget:
-        print(f"Budget: {budget}")
-        print(f"Spent: {spent}")
-        print(f"Team hours/week capacity for GRC work: {company_data['metrics']['security']['teamCapacity']['GRC']}")
-        print(f"Team hours/week capacity for Corporate Security work: {company_data['metrics']['security']['teamCapacity']['corpSec']}")
-        print(f"Team hours/week capacity for Product Security work: {company_data['metrics']['security']['teamCapacity']['prodSec']}")
-        print(f"Team hours/week capacity for Security Operations Center work: {company_data['metrics']['security']['teamCapacity']['SOC']}")
-        print(f"Team hours/week capacity for Privacy work: {company_data['metrics']['security']['teamCapacity']['privacy']}")
-        print(f"Team hours/week capacity for Incident Response work: {company_data['metrics']['security']['teamCapacity']['incidentResponse']}")
+        #print(f"Budget:       {budget}")
+        print(f"Budget Spent:     {spent}")
+        print(f"Budget Remaining: {remaining}")
         print("")
-        print("So far you have invested in:")
+        print("Team hours/week work capacity for:") 
+        print(f"    GRC:                {company_data['metrics']['security']['teamCapacity']['GRC']}")
+        print(f"    Corporate Security: {company_data['metrics']['security']['teamCapacity']['corpSec']}")
+        print(f"    Product Security:   {company_data['metrics']['security']['teamCapacity']['prodSec']}")
+        print(f"    SOC:                {company_data['metrics']['security']['teamCapacity']['SOC']}")
+        print(f"    Privacy:            {company_data['metrics']['security']['teamCapacity']['privacy']}")
+        print(f"    Incident Response:  {company_data['metrics']['security']['teamCapacity']['incidentResponse']}")
+        print(f"    Team Management:    ???") #{company_data['metrics']['security']['teamCapacity']['incidentResponse']}")
+        print("")
+        if len(company_data['investments']) > 0:
+            print("So far you have invested in:")
         for investment in company_data['investments']:
-            print(f"- {investment}")
+            print(f"    {investment}")
         print("")
         print(f"Select from one of the following areas to invest in.")
         print("")
         investment_area = select_directory('../json/investment-areas')
 
         clear_screen()
-        print(f"Select from the following choices in the area of {investment_area}")
+        print(f"Select from the following choices in the area of {investment_area}.")
+        print("")
+        print(f"Enter 0 if you'd like to go back with no selection.")
         print("")
         file_name = select_file(f'../json/investment-areas/{investment_area}', company_data['investments'])
-        if file_name is "r":
+        if file_name is "goBack":
             # return to area selection without making an investment selection
             clear_screen()
             continue
@@ -154,7 +165,7 @@ Enter the corresponding number for the company you'd like to start working for.
         clear_screen()
 
     clear_screen()
-    print(f"You have exhausted your spending budget. Starting the quarter. Press any key to continue")
+    print(f"You have spent your entire budget and are ready to start the quarter. Press any key to continue")
     input()
 
 if __name__ == "__main__":
