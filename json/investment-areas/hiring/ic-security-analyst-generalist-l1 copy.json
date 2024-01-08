@@ -1,0 +1,35 @@
+{
+    "description": "A generalist security analyst that can work in any area of GRC and Privacy. Has breadth over common compliance frameworks, but not breadth.", 
+    "metrics": {
+        "security": {
+            "fashion": 5,
+            "fashion_ImpactDescription": "One of the most common things inspectors like to see.",
+            "riskMass": 0,
+            "teamCapacity": {
+                "GRC": 0,
+                "CorpSec": 1,
+                "CorpSec_ImpactDescription": "Takes time to manage solution configuration",
+                "ProdSec": 0,
+                "SOC": 0,
+                "IncidentResponse": 5,
+                "IncidentResponse_ImpactDescription": "Guaranteed to generate alerts that require security team review and response",
+                "Privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 50,
+                    "perNonEngineer": 50,
+                    "perCustomer": 0,
+                    "fixed": 0
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": -1,
+                    "perEngineer_ImpactDescription": "AV/EDR solutions are known to block engineer workflows. It gets better over time, but doesn't drop to zero.",
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+"areas": {
+    "security": {
+        "fashion": 0,
+        "riskMass": 0,
+        "teamCapacity": {
+            "GRC": 0,
+            "CorpSec": 0,
+            "ProdSec": 0,
+            "SOC": 0,
+            "Privacy": 0,
+            "IR": 0
+        }
+    },
+    "business": {
+        "securityCosts": {
+            "dollarsAnnually": {
+                "perEngineer": 0,
+                "perNonEngineer": 0,
+                "perCustomer": 0,
+                "fixed": 0
+            },
+            "timeWeeklyAverage": {
+                "perEngineer": 0,
+                "perNonEngineer": 0
+            }
+        }
+    }
+}
