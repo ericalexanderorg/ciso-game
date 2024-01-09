@@ -1,5 +1,6 @@
 import os
 import json
+import copy
 
 def selection_error(max):
     error = "Invalid input. Please enter only a number within the range of selections above."
@@ -85,23 +86,38 @@ def update_dict(old, new):
            old[key] = update_dict(old[key], new[key])
         elif "ImpactDescription" not in key:
             try:
+                t = old[key]
                 old[key] += new[key]
+                if old[key] < 0:
+                    old['process_investment_error'] = True
+                    print(f"You do not have enough team {key} capacity to make this purchase. You'll need to hire before making this purchase. Press any key to continue.")
+                    input()
+                    return old
             except:
-                print(f'could not update {key}')
+                #print(f'could not update {key}')
+                #input()
+                pass
     
     return old
     
 def process_investment(company_data, investment_area, file_name):
+    # make an independent copy of company_data including all nested mutable objects
+    original_company_data = copy.deepcopy(company_data)
     with open(os.path.join('../json/investment-areas/', investment_area, file_name), 'r') as file:
        investment_data = json.load(file)
 
-    company_data['investments'].append(file_name)
+    company_data = update_dict(company_data, investment_data)
+    if 'process_investment_error' in str(company_data):
+        # Couldn't afford this purchase, revert to original company_data
+        return original_company_data
+    else:
+        company_data['investments'].append(file_name)
+        return company_data
 
-    return update_dict(company_data, investment_data)
+def remove_file_extension(file_name):
+    return file_name.split('.')[0]
 
-def main():
-    company_data = {}
-
+def prompt_select_company():
     clear_screen()
     prompt = """Welcome to the CISO game!
 
@@ -115,33 +131,34 @@ Enter the corresponding number for the company you'd like accept the job of CISO
     with open(os.path.join('../json/companies', company_file_name), 'r') as file:
        company_data = json.load(file)
 
+    return company_data
+
+def prompt_first_day(prompts):
     clear_screen()
-    print(company_data['firstDayPrompt'])
-    print("")
-    print(f"We currently have {company_data['metrics']['business']['customerCount']} customers and expect to grow new customers by 100% YOY")
-    print("")
-    print("We currently run all of our infra in AWS")
-    print("")
+    for prompt in prompts:
+        print(prompt)
+
+def prompt_spend_budget(company_data):
     budget = company_data['metrics']['business']['annualSecurityBudget']
     spent = invested(company_data)
     remaining = budget - spent
-    while spent < budget:
+    while spent <= budget:
         #print(f"Budget:       {budget}")
         print(f"Budget Spent:     {spent}")
         print(f"Budget Remaining: {remaining}")
         print("")
-        print("Team hours/week work capacity for:") 
+        print("Team hours/week capacity for:") 
         print(f"    GRC:                {company_data['metrics']['security']['teamCapacity']['GRC']}")
         print(f"    Corporate Security: {company_data['metrics']['security']['teamCapacity']['corpSec']}")
         print(f"    Product Security:   {company_data['metrics']['security']['teamCapacity']['prodSec']}")
         print(f"    SOC:                {company_data['metrics']['security']['teamCapacity']['SOC']}")
         print(f"    Privacy:            {company_data['metrics']['security']['teamCapacity']['privacy']}")
         print(f"    Incident Response:  {company_data['metrics']['security']['teamCapacity']['incidentResponse']}")
-        print(f"    Team Management:    ???") #{company_data['metrics']['security']['teamCapacity']['incidentResponse']}")
         print("")
         if len(company_data['investments']) > 0:
             print("So far you have invested in:")
         for investment in company_data['investments']:
+            investment = remove_file_extension(investment)
             print(f"    {investment}")
         print("")
         print(f"Select from one of the following areas to invest in.")
@@ -167,6 +184,14 @@ Enter the corresponding number for the company you'd like accept the job of CISO
     clear_screen()
     print(f"You have spent your entire budget and are ready to start the quarter. Press any key to continue")
     input()
+
+    return company_data
+
+def main():
+    company_data = prompt_select_company()
+    prompt_first_day(company_data['firstDayPrompts'])
+    company_data = prompt_spend_budget(company_data)
+
 
 if __name__ == "__main__":
    main()

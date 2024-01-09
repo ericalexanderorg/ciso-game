@@ -1,16 +1,16 @@
 {
-    "description": "Achieve SOC 2 Type 1 in the security trust service criteria.", 
+    "description": "Purchase a Cloud Security Posture Management SAAS solution. $200,000", 
     "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 10,
+            "fashion": 1,
             "riskMass": 0,
             "teamCapacity": {
-                "GRC": 10,
+                "GRC": 0,
                 "corpSec": 0,
-                "prodSec": 0,
+                "prodSec": 2,
                 "SOC": 0,
-                "incidentResponse": 0,
+                "incidentResponse": 1,
                 "privacy": 0
             }
         },
@@ -20,10 +20,10 @@
                     "perEngineer": 0,
                     "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 150000
+                    "fixed": 200000
                 },
                 "timeWeeklyAverage": {
-                    "perEngineer": -1,
+                    "perEngineer": 0,
                     "perNonEngineer": 0
                 }
             }

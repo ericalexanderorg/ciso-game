@@ -1,16 +1,16 @@
 {
-    "description": "Creating and sharing cyber security policies. $0", 
+    "description": "Purchase a SAAS based SEIM solution. $50,000", 
     "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 10,
+            "fashion": 2,
             "riskMass": 0,
             "teamCapacity": {
-                "GRC": 10,
+                "GRC": 0,
                 "corpSec": 0,
                 "prodSec": 0,
-                "SOC": 0,
-                "incidentResponse": 0,
+                "SOC": -7,
+                "incidentResponse": -1,
                 "privacy": 0
             }
         },
@@ -20,7 +20,7 @@
                     "perEngineer": 0,
                     "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 0
+                    "fixed": 50000
                 },
                 "timeWeeklyAverage": {
                     "perEngineer": 0,

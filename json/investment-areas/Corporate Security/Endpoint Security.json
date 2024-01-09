@@ -1,29 +1,29 @@
 {
-    "description": "Purchase and implement a trust portal SAAS service. This will ease customer onboarding friction points while giving your team time back.", 
+    "description": "AV or EDR on computers. $50/computer.", 
     "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 0,
+            "fashion": 5,
             "riskMass": 0,
             "teamCapacity": {
-                "GRC": -5,
-                "corpSec": 0,
+                "GRC": 0,
+                "corpSec": 1,
                 "prodSec": 0,
                 "SOC": 0,
-                "incidentResponse": 0,
+                "incidentResponse": 5,
                 "privacy": 0
             }
         },
         "business": {
             "securityCosts": {
                 "dollarsAnnually": {
-                    "perEngineer": 0,
-                    "perNonEngineer": 0,
+                    "perEngineer": 50,
+                    "perNonEngineer": 50,
                     "perCustomer": 0,
-                    "fixed": 20000
+                    "fixed": 0
                 },
                 "timeWeeklyAverage": {
-                    "perEngineer": 0,
+                    "perEngineer": -1,
                     "perNonEngineer": 0
                 }
             }

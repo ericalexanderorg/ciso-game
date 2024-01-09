@@ -1,12 +1,12 @@
 {
-    "description": "Creating and sharing cyber security policies. $0", 
+    "description": "Purchase and implement a trust portal SAAS service. $20,000", 
     "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 10,
+            "fashion": 0,
             "riskMass": 0,
             "teamCapacity": {
-                "GRC": 10,
+                "GRC": -5,
                 "corpSec": 0,
                 "prodSec": 0,
                 "SOC": 0,
@@ -20,7 +20,7 @@
                     "perEngineer": 0,
                     "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 0
+                    "fixed": 20000
                 },
                 "timeWeeklyAverage": {
                     "perEngineer": 0,

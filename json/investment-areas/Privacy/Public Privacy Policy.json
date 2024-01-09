@@ -1,17 +1,18 @@
 {
-    "description": "Creating and sharing cyber security policies. $0", 
+    "description": "Create a privacy policy that will be included in the footer of all public websites collecting data. $0", 
     "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 10,
+            "fashion": 5,
+            "fashion_ImpactDescription": "One of the most common things inspectors like to see.",
             "riskMass": 0,
             "teamCapacity": {
-                "GRC": 10,
+                "GRC": -0.5,
                 "corpSec": 0,
                 "prodSec": 0,
                 "SOC": 0,
                 "incidentResponse": 0,
-                "privacy": 0
+                "privacy": 10
             }
         },
         "business": {

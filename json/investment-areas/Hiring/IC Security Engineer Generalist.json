@@ -1,17 +1,17 @@
 {
-    "description": "Creating and sharing cyber security policies. $0", 
-    "limit": 1,
+    "description": "Hire a mid-level security analyst generalist. $100,000", 
+    "limit": 100,
     "metrics": {
         "security": {
-            "fashion": 10,
-            "riskMass": 0,
+            "fashion": 1,
+            "riskMass": -1,
             "teamCapacity": {
-                "GRC": 10,
-                "corpSec": 0,
-                "prodSec": 0,
-                "SOC": 0,
-                "incidentResponse": 0,
-                "privacy": 0
+                "GRC": 30,
+                "corpSec": 2,
+                "prodSec": 1,
+                "SOC": 1,
+                "incidentResponse": 1,
+                "privacy": 5
             }
         },
         "business": {
@@ -20,7 +20,7 @@
                     "perEngineer": 0,
                     "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 0
+                    "fixed": 100000
                 },
                 "timeWeeklyAverage": {
                     "perEngineer": 0,
