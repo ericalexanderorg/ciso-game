@@ -1,19 +1,14 @@
 {
-    "description": "Your team has recieved a report of an exposed S3 bucket.", 
+    "description": "Your team has recieved a report of an exposed S3 bucket. All objects in the bucket are accessible via anonymous requests.", 
     "choices": [
         {
             "description": "Do nothing. We get reports like this. Most of the time they're nothing concerning.",
-            "whammy": "It turns out there was customer data in that bucket that led to a breach and a cost of $9 million for the company",
-            "impact": {
-                "business": {
-                    "securityCosts": {
-                        "dollarsAnnually": {
-                            "fixed": 9000000,
-                            "fixed_ImpactDescription": "The FTC fined the company $9 million through a civil suit"
-                        }
-                    }
-                }
-            }
+            "impact": "It turns out there was customer data in that bucket that led to a breach and a total cost of $9 million for the company, and there was no budget to cover.",
+            "gameOver": true
+        },
+        {
+            "description": "Stop everything and review.",
+            "impact": "The bucket had static website data (images, javascript, etc) for a public site. Nothing to worry about"
         }
     ]
 

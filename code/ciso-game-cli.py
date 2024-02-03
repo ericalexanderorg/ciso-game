@@ -144,6 +144,7 @@ def prompt_spend_budget(company_data):
     remaining = budget - spent
     while spent <= budget:
         #print(f"Budget:       {budget}")
+        print("")
         print(f"Budget Spent:     {spent}")
         print(f"Budget Remaining: {remaining}")
         print("")
@@ -187,10 +188,73 @@ def prompt_spend_budget(company_data):
 
     return company_data
 
+def load_whammies():
+    whammies = {'whammies': []}
+    directory = "../json/whammies"
+    files = get_json_files(directory)
+    for i, filename in enumerate(files, 1):
+        with open(os.path.join(directory, filename), 'r') as file:
+            whammy = json.load(file)
+            whammies['whammies'].append(whammy)
+    return whammies
+
+def process_whammies(company_data):
+    clear_screen()
+    whammies = load_whammies()
+    for whammy in whammies['whammies']:
+        r = len(whammy['choices'])
+        input_valid = False
+        while not input_valid:
+            clear_screen()
+            print(whammy['description'])
+            print("")
+            print("What do you do? Choose one of the following by entering the corresponding number.")
+            print("")
+            i = 1
+            for choice in whammy['choices']:
+                description = choice['description']
+                print(f'{i}: {description}')
+                i += 1
+            try:
+                selection_index = int(input())-1
+            except:
+                # we got something other than in int
+                selection_index = -2 #will trigger invalid selection
+            if selection_index > -1 and selection_index <= r - 1:
+                input_valid = True
+                selection = whammy['choices'][selection_index]
+                selection_description = selection['description']
+                #whammy_description = selection['whammy']
+                clear_screen()
+                print(f'You chose: {selection_description}')
+                print("")
+                print(selection['impact'])
+                print("")
+                input("Press ENTER to continue")
+                if 'gameOver' in selection:
+                    clear_screen()
+                    print("Due to a restructuring your position has been eliminated. We wish you all the best in your future endeavors. Good bye!")
+                    print("")
+                    input("Press ENTER to continue")
+                    exit()
+            else:
+                input("Invalid selection. Press enter to continue.")
+                clear_screen()
+
+def success():
+    clear_screen()
+    print("You've successfully made it to the 1 year anniversary.")
+    print("Your stock options have vested, the company reached unicorn status, and now you can retire early.")
+    print("Good job!")
+
 def main():
     company_data = prompt_select_company()
-    prompt_first_day(company_data['firstDayPrompts'])
-    company_data = prompt_spend_budget(company_data)
+    process_whammies(company_data)
+    success()
+    #prompt_first_day(company_data['firstDayPrompts'])
+    #company_data = prompt_spend_budget(company_data)
+    #whammies(company_data)
+    
 
 
 if __name__ == "__main__":
