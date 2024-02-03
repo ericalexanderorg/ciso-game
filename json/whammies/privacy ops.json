@@ -1,0 +1,15 @@
+{
+    "description": "Legal is asking for your help establishing a data deletion capability to meet California regulatory requirements.",
+    "choices": [
+        {
+            "description": "Tell them this isn't a security issue and even if it was, you're already behind on the projects to you comitted to.",
+            "impact": "Legal isn't happy with your response, but ultimately agrees and will work with the customer service department to find a solution."
+        },
+        {
+            "description": "Agree and select a security project to put on the back burner.",
+            "impact": "This choice impacts work related to reaching SOX compliance and now the CEO isn't happy because IPO readiness dates are slipping.",
+            "gameOver": true
+        }
+    ]
+
+}
