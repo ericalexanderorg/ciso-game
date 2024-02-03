@@ -183,7 +183,7 @@ def prompt_spend_budget(company_data):
         clear_screen()
 
     clear_screen()
-    print(f"You have spent your entire budget and are ready to start the quarter. Press any key to continue")
+    print(f"You have spent your entire budget and are ready to start the year. Press ENTER to continue")
     input()
 
     return company_data
@@ -249,11 +249,10 @@ def success():
 
 def main():
     company_data = prompt_select_company()
+    prompt_first_day(company_data['firstDayPrompts'])
+    company_data = prompt_spend_budget(company_data)
     process_whammies(company_data)
     success()
-    #prompt_first_day(company_data['firstDayPrompts'])
-    #company_data = prompt_spend_budget(company_data)
-    #whammies(company_data)
     
 
 
