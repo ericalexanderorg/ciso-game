@@ -1,0 +1,32 @@
+{
+    "description": "Outsourced SOC. $200,000", 
+    "limit": 1,
+    "metrics": {
+        "security": {
+            "fashion": 2,
+            "riskMass": 0,
+            "teamCapacity": {
+                "GRC": 0,
+                "corpSec": 0,
+                "prodSec": 0,
+                "SOC": 10,
+                "incidentResponse": 5,
+                "privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0,
+                    "perCustomer": 0,
+                    "fixed": 200000
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}

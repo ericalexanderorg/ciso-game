@@ -1,0 +1,32 @@
+{
+    "description": "Hire a junior SOC Analyst - $50,000", 
+    "limit": 100,
+    "metrics": {
+        "security": {
+            "fashion": 1,
+            "riskMass": -1,
+            "teamCapacity": {
+                "GRC": 1,
+                "corpSec": 10,
+                "prodSec": 10,
+                "SOC": 10,
+                "incidentResponse": 4,
+                "privacy": 1
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0,
+                    "perCustomer": 0,
+                    "fixed": 100000
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}

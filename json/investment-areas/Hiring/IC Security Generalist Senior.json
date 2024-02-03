@@ -1,16 +1,16 @@
 {
-    "description": "Hire a mid-level security analyst generalist. $100,000", 
+    "description": "Hire a Senior Security Generalist. $100,000", 
     "limit": 100,
     "metrics": {
         "security": {
             "fashion": 1,
             "riskMass": -1,
             "teamCapacity": {
-                "GRC": 30,
-                "corpSec": 2,
-                "prodSec": 1,
-                "SOC": 1,
-                "incidentResponse": 1,
+                "GRC": 5,
+                "corpSec": 5,
+                "prodSec": 5,
+                "SOC": 5,
+                "incidentResponse": 5,
                 "privacy": 5
             }
         },

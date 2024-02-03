@@ -1,0 +1,32 @@
+{
+    "description": "Hire a junior GRC Analyst - $40,000", 
+    "limit": 100,
+    "metrics": {
+        "security": {
+            "fashion": 1,
+            "riskMass": -1,
+            "teamCapacity": {
+                "GRC": 0,
+                "corpSec": 5,
+                "prodSec": 0,
+                "SOC": 10,
+                "incidentResponse": 4,
+                "privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0,
+                    "perCustomer": 0,
+                    "fixed": 400000
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "description": "EDR on computers. $50/computer.", 
+    "limit": 1,
+    "metrics": {
+        "security": {
+            "fashion": 5,
+            "riskMass": 0,
+            "teamCapacity": {
+                "GRC": 0,
+                "corpSec": 1,
+                "prodSec": 0,
+                "SOC": 0,
+                "incidentResponse": 5,
+                "privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 50,
+                    "perNonEngineer": 50,
+                    "perCustomer": 0,
+                    "fixed": 0
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": -1,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}

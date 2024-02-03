@@ -1,29 +1,29 @@
 {
-    "description": "AV or EDR on computers. $50/computer.", 
+    "description": "Vulnerable dependency scanner - $20,000", 
     "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 5,
+            "fashion": 1,
             "riskMass": 0,
             "teamCapacity": {
                 "GRC": 0,
-                "corpSec": 1,
-                "prodSec": 0,
+                "corpSec": 0,
+                "prodSec": 3,
                 "SOC": 0,
-                "incidentResponse": 5,
+                "incidentResponse": 0,
                 "privacy": 0
             }
         },
         "business": {
             "securityCosts": {
                 "dollarsAnnually": {
-                    "perEngineer": 50,
-                    "perNonEngineer": 50,
+                    "perEngineer": 10,
+                    "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 0
+                    "fixed": 20000
                 },
                 "timeWeeklyAverage": {
-                    "perEngineer": -1,
+                    "perEngineer": 0.5,
                     "perNonEngineer": 0
                 }
             }
