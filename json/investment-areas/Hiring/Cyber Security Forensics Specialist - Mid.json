@@ -1,0 +1,12 @@
+{
+    "description": "Cyber Security Forensics Specialist - Mid - $54,000", 
+    "metrics": {
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 54000
+                }
+            }
+        }
+    }
+}

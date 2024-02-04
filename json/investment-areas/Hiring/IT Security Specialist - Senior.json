@@ -1,0 +1,20 @@
+{
+    "description": "IT Security Specialist - Senior - $188,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 5,
+                "corpSec": 5,
+                "SOC": 5,
+                "incidentResponse": 5
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 188000
+                }
+            }
+        }
+    }
+}

@@ -1,14 +1,14 @@
 {
-    "description": "Hire a mid-level GRC Analyst - $100,000", 
+    "description": "Dependency Analysis - $100,000", 
     "metrics": {
         "security": {
             "teamCapacity": {
-                "GRC": 1,
-                "corpSec": 10,
-                "prodSec": 10,
-                "SOC": 10,
-                "incidentResponse": 4,
-                "privacy": 1
+                "GRC": 0,
+                "corpSec": 0,
+                "prodSec": -3,
+                "SOC": 0,
+                "incidentResponse": 0,
+                "privacy": 0
             }
         },
         "business": {
@@ -20,7 +20,7 @@
                     "fixed": 100000
                 },
                 "timeWeeklyAverage": {
-                    "perEngineer": 0,
+                    "perEngineer": -0.5,
                     "perNonEngineer": 0
                 }
             }

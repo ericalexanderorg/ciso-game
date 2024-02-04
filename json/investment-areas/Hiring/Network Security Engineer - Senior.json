@@ -1,0 +1,20 @@
+{
+    "description": "Network Security Engineer - Senior - $186,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 5,
+                "corpSec": 5,
+                "SOC": 5,
+                "incidentResponse": 5
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 186000
+                }
+            }
+        }
+    }
+}

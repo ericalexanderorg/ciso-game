@@ -1,0 +1,17 @@
+{
+    "description": "SOC Analyst - Senior - $133,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "SOC": 7
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 133000
+                }
+            }
+        }
+    }
+}

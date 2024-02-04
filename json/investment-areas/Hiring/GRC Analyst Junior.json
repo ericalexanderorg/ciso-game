@@ -1,0 +1,17 @@
+{
+    "description": "GRC Analyst - Junior - $56,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 2
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 56000
+                }
+            }
+        }
+    }
+}

@@ -3,6 +3,10 @@
     "firstDayPrompts": [
         "Welcome to Jetson Robot, we're so excited to have you.",
         "",
+        "",
+        "We operate a online marketplace to hire gig workers to come into your home and do laundry for you.",
+        "There's a new competitor that's starting up. It's very important we outpace their ability to ship marketplace features.",
+        "",
         "Your highest priorities this year are to:",
         "    1. Reduce friction points related to customer security questionaires",
         "    2. Make sure we're IPO ready.",
@@ -10,23 +14,25 @@
         "",
         "Some things about Jetson Robot that should help you invest your budget:",
         "    * We are cloud native and run everything in AWS",
-        "    * Our coding language of choice is Go"
+        "    * Our coding language of choice is Go",
+        "    * We currently have 100 customers",
+        "    * We currently have 10 engineering and 50 non-engineering employees."
     ],
     "metrics": {
         "security": {
             "teamCapacity": {
-                "GRC": 10,
-                "corpSec": 1,
-                "prodSec": 1,
-                "SOC": 1,
-                "privacy": 1,
-                "incidentResponse": 2
+                "GRC": 0,
+                "corpSec": 0,
+                "prodSec": 0,
+                "SOC": 0,
+                "privacy": 0,
+                "incidentResponse": 0
             }
         },
         "business": {
             "employeesEngineering": 10,
             "employeesNonEngineering": 50,
-            "annualSecurityBudget": 150000,
+            "annualSecurityBudget": 500000,
             "securityCosts": {
                 "dollarsAnnually": {
                     "perEngineer": 0,

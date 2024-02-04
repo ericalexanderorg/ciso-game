@@ -1,0 +1,17 @@
+{
+    "description": "GRC Analyst - Senior - $150,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 7
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 150000
+                }
+            }
+        }
+    }
+}

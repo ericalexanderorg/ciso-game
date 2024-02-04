@@ -1,0 +1,17 @@
+{
+    "description": "Cloud Security Engineer - Junior - $83,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "prodSec": 1
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 83000
+                }
+            }
+        }
+    }
+}

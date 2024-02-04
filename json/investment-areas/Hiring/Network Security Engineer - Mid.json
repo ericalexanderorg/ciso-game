@@ -1,0 +1,20 @@
+{
+    "description": "Network Security Engineer - Mid - $117,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 2,
+                "corpSec": 2,
+                "SOC": 2,
+                "incidentResponse": 2
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 117000
+                }
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@
         "security": {
             "teamCapacity": {
                 "GRC": 0,
-                "corpSec": 2,
+                "corpSec": -0.5,
                 "prodSec": 0,
                 "SOC": 0,
                 "incidentResponse": 0,

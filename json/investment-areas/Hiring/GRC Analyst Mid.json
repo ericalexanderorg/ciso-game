@@ -1,0 +1,17 @@
+{
+    "description": "GRC Analyst - Mid Level - $90,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 5
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 90000
+                }
+            }
+        }
+    }
+}

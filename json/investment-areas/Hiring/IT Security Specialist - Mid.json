@@ -1,0 +1,20 @@
+{
+    "description": "IT Security Specialist - Mid - $113,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 2,
+                "corpSec": 2,
+                "SOC": 2,
+                "incidentResponse": 2
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 113000
+                }
+            }
+        }
+    }
+}

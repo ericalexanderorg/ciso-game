@@ -1,0 +1,18 @@
+
+{
+    "description": "Product Security Engineer - Mid - $135,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "prodSec": 5
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 135000
+                }
+            }
+        }
+    }
+}

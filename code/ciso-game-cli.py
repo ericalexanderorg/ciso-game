@@ -45,7 +45,7 @@ def select_file(directory, investments=[]):
 
     # prevent duplicate selection
     if files[choice - 1] in investments:
-        print(f"You have already selected {options[i]}. Please make another selection")
+        print(f"You have already made that selection. Please make another selection")
         choice = select_number(max_choices)
 
     # return the filename in the directory
@@ -90,7 +90,7 @@ def update_dict(old, new):
                 old[key] += new[key]
                 if old[key] < 0:
                     old['process_investment_error'] = True
-                    print(f"You do not have enough team {key} capacity to make this purchase. You'll need to hire before making this purchase. Press any key to continue.")
+                    print(f"You do not have enough team {key} capacity to make this purchase. You'll need to hire before making this purchase. Press ENTER to continue.")
                     input()
                     return old
             except:
@@ -148,7 +148,7 @@ def prompt_spend_budget(company_data):
         print(f"Budget Spent:     {spent}")
         print(f"Budget Remaining: {remaining}")
         print("")
-        print("Team hours/week capacity for:") 
+        print("Security team capacity (hours/week) for core domains:") 
         print(f"    GRC:                {company_data['metrics']['security']['teamCapacity']['GRC']}")
         print(f"    Corporate Security: {company_data['metrics']['security']['teamCapacity']['corpSec']}")
         print(f"    Product Security:   {company_data['metrics']['security']['teamCapacity']['prodSec']}")
@@ -157,7 +157,7 @@ def prompt_spend_budget(company_data):
         print(f"    Incident Response:  {company_data['metrics']['security']['teamCapacity']['incidentResponse']}")
         print("")
         if len(company_data['investments']) > 0:
-            print("So far you have invested in:")
+            print("You have invested in:")
         for investment in company_data['investments']:
             investment = remove_file_extension(investment)
             print(f"    {investment}")

@@ -1,0 +1,17 @@
+{
+    "description": "Security Researcher - Mid - $90,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "prodSec": 0.25
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 90000
+                }
+            }
+        }
+    }
+}

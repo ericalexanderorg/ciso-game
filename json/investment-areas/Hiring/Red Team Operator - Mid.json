@@ -1,0 +1,18 @@
+{
+    "description": "Red Team Operator - Mid - $100,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "corpSec": 0.5,
+                "prodSec": 0.5
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 100000
+                }
+            }
+        }
+    }
+}

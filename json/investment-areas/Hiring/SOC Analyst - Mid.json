@@ -1,0 +1,17 @@
+{
+    "description": "SOC Analyst - Mid - $87,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "SOC": 5
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 87000
+                }
+            }
+        }
+    }
+}

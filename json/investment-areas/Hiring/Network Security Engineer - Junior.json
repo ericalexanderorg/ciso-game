@@ -1,0 +1,20 @@
+{
+    "description": "Network Security Engineer - Junior - $74,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 1,
+                "corpSec": 1,
+                "SOC": 1,
+                "incidentResponse": 1
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "fixed": 74000
+                }
+            }
+        }
+    }
+}
