@@ -1,11 +1,7 @@
 {
     "description": "Create a privacy policy that will be included in the footer of all public websites collecting data. $0", 
-    "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 5,
-            "fashion_ImpactDescription": "One of the most common things inspectors like to see.",
-            "riskMass": 0,
             "teamCapacity": {
                 "GRC": -0.5,
                 "corpSec": 0,

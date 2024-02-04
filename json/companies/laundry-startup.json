@@ -14,8 +14,6 @@
     ],
     "metrics": {
         "security": {
-            "fashion": 0,
-            "riskMass": 10,
             "teamCapacity": {
                 "GRC": 10,
                 "corpSec": 1,

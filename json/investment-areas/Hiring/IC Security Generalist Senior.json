@@ -1,10 +1,7 @@
 {
     "description": "Hire a Senior Security Generalist. $100,000", 
-    "limit": 100,
     "metrics": {
         "security": {
-            "fashion": 1,
-            "riskMass": -1,
             "teamCapacity": {
                 "GRC": 5,
                 "corpSec": 5,

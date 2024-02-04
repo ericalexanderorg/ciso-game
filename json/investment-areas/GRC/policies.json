@@ -1,10 +1,7 @@
 {
     "description": "Creating and sharing cyber security policies. $0", 
-    "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 10,
-            "riskMass": 0,
             "teamCapacity": {
                 "GRC": 10,
                 "corpSec": 0,

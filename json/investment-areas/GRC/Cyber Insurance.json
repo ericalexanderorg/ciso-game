@@ -1,10 +1,7 @@
 {
     "description": "Purchase cyber insurance. $10,000", 
-    "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 0,
-            "riskMass": 0,
             "teamCapacity": {
                 "GRC": 0,
                 "corpSec": 0,

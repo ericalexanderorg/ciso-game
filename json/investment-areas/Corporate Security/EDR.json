@@ -1,10 +1,7 @@
 {
     "description": "EDR on computers. $50/computer.", 
-    "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 5,
-            "riskMass": 0,
             "teamCapacity": {
                 "GRC": 0,
                 "corpSec": 1,

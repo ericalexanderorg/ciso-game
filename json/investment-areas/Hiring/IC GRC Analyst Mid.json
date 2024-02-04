@@ -1,10 +1,7 @@
 {
     "description": "Hire a mid-level GRC Analyst - $100,000", 
-    "limit": 100,
     "metrics": {
         "security": {
-            "fashion": 1,
-            "riskMass": -1,
             "teamCapacity": {
                 "GRC": 1,
                 "corpSec": 10,

@@ -1,10 +1,7 @@
 {
     "description": "Purchase a Cloud Security Posture Management SAAS solution. $200,000", 
-    "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 1,
-            "riskMass": 0,
             "teamCapacity": {
                 "GRC": 0,
                 "corpSec": 0,

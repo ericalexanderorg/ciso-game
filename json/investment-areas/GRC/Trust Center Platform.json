@@ -1,10 +1,7 @@
 {
     "description": "Purchase and implement a trust portal SAAS service. $20,000", 
-    "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 0,
-            "riskMass": 0,
             "teamCapacity": {
                 "GRC": -5,
                 "corpSec": 0,

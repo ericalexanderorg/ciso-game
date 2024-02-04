@@ -1,14 +1,14 @@
 {
-    "description": "Purchase a WAF. $50,000", 
+    "description": "Hire a consulting firm to review your business, applicable regulatory (GDPR/CCPA) requirements, and privacy operations - $100,000", 
     "metrics": {
         "security": {
             "teamCapacity": {
-                "GRC": 0,
+                "GRC": -0.5,
                 "corpSec": 0,
-                "prodSec": 3,
+                "prodSec": 0,
                 "SOC": 0,
                 "incidentResponse": 0,
-                "privacy": 0
+                "privacy": 10
             }
         },
         "business": {
@@ -17,10 +17,10 @@
                     "perEngineer": 0,
                     "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 50000
+                    "fixed": 100000
                 },
                 "timeWeeklyAverage": {
-                    "perEngineer": 0.1,
+                    "perEngineer": 0,
                     "perNonEngineer": 0
                 }
             }

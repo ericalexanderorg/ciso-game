@@ -1,10 +1,7 @@
 {
     "description": "Achieve SOC 2 Type 1 in the security trust service criteria. $150,000", 
-    "limit": 1,
     "metrics": {
         "security": {
-            "fashion": 10,
-            "riskMass": 0,
             "teamCapacity": {
                 "GRC": 20,
                 "corpSec": 0,
