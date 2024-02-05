@@ -1,0 +1,29 @@
+{
+    "description": "AV on computers. $10/computer.", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 0,
+                "corpSec": -0.4,
+                "prodSec": 0,
+                "SOC": -0.1,
+                "incidentResponse": -0.4,
+                "privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 10,
+                    "perNonEngineer": 10,
+                    "perCustomer": 0,
+                    "fixed": 0
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": -1,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}

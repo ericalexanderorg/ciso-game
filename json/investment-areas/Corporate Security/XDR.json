@@ -1,0 +1,29 @@
+{
+    "description": "XDR on computers. $75/computer.", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 0,
+                "corpSec": -0.5,
+                "prodSec": 0,
+                "SOC": -0.25,
+                "incidentResponse": -0.5,
+                "privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 75,
+                    "perNonEngineer": 75,
+                    "perCustomer": 0,
+                    "fixed": 0
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": -1,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}
