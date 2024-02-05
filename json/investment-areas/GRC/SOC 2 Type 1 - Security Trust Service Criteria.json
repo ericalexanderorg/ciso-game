@@ -3,7 +3,7 @@
     "metrics": {
         "security": {
             "teamCapacity": {
-                "GRC": 20,
+                "GRC": -10,
                 "corpSec": 0,
                 "prodSec": 0,
                 "SOC": 0,

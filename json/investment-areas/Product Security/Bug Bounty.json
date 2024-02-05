@@ -5,7 +5,7 @@
             "teamCapacity": {
                 "GRC": 0,
                 "corpSec": 0,
-                "prodSec": 3,
+                "prodSec": -1,
                 "SOC": 0,
                 "incidentResponse": 0,
                 "privacy": 0
@@ -20,7 +20,7 @@
                     "fixed": 50000
                 },
                 "timeWeeklyAverage": {
-                    "perEngineer": -1,
+                    "perEngineer": -0.5,
                     "perNonEngineer": 0
                 }
             }
