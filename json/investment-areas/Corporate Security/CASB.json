@@ -1,0 +1,29 @@
+{
+    "description": "A cloud access security broker solution - $20/computer.", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 0,
+                "corpSec": -2,
+                "prodSec": 0,
+                "SOC": 0,
+                "incidentResponse": 0,
+                "privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 20,
+                    "perNonEngineer": 20,
+                    "perCustomer": 0,
+                    "fixed": 0
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": -0.1,
+                    "perNonEngineer": -0.1
+                }
+            }
+        }
+    }
+}
