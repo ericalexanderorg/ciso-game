@@ -14,7 +14,8 @@
         "    * We are cloud native and run everything in GCP",
         "    * Our coding language of choice is Rust",
         "    * We currently have 5 customers",
-        "    * We currently have 50 engineering and 10 non-engineering employees."
+        "    * We currently have 50 engineering and 10 non-engineering employees.",
+        "    * We prefer SAAS over open source solutions."
     ],
     "metrics": {
         "security": {

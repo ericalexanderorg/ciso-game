@@ -1,10 +1,10 @@
 {
-    "description": "A cloud access security broker solution - $20/computer.", 
+    "description": "A SSO/IDP solution. $75 per internal user (employee/contractor/etc).", 
     "metrics": {
         "security": {
             "teamCapacity": {
                 "GRC": 0,
-                "corpSec": -1,
+                "corpSec": -5,
                 "prodSec": 0,
                 "SOC": 0,
                 "incidentResponse": 0,
@@ -14,14 +14,14 @@
         "business": {
             "securityCosts": {
                 "dollarsAnnually": {
-                    "perEngineer": 20,
-                    "perNonEngineer": 20,
+                    "perEngineer": 75,
+                    "perNonEngineer": 75,
                     "perCustomer": 0,
                     "fixed": 0
                 },
                 "timeWeeklyAverage": {
-                    "perEngineer": -0.1,
-                    "perNonEngineer": -0.1
+                    "perEngineer": -1,
+                    "perNonEngineer": 0
                 }
             }
         }

@@ -16,7 +16,8 @@
         "    * We are cloud native and run everything in AWS",
         "    * Our coding language of choice is Go",
         "    * We currently have 100 customers",
-        "    * We currently have 10 engineering and 50 non-engineering employees."
+        "    * We currently have 10 engineering and 50 non-engineering employees.",
+        "    * We prefer SAAS over open source solutions."
     ],
     "metrics": {
         "security": {
