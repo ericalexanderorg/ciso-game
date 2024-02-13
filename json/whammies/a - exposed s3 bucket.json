@@ -7,7 +7,7 @@
             "gameOver": true
         },
         {
-            "description": "Stop everything and review.",
+            "description": "Stop everything and review, but it _could_ impact both your project deliverable and/or other team's project/product delivarables.",
             "impact": "The bucket had static website data (images, javascript, etc) for a public site. Nothing to worry about"
         }
     ]

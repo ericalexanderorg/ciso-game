@@ -3,7 +3,8 @@
     "metrics": {
         "security": {
             "teamCapacity": {
-                "GRC": 7
+                "GRC": 7,
+                "Privacy": 1
             }
         },
         "business": {

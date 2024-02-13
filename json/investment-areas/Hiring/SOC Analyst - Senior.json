@@ -3,6 +3,7 @@
     "metrics": {
         "security": {
             "teamCapacity": {
+                "corpSec": 1,
                 "SOC": 7
             }
         },
