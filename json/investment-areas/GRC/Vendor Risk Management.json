@@ -1,0 +1,29 @@
+{
+    "description": "SAAS based vendor risk management solution. $90,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": -2,
+                "corpSec": 0,
+                "prodSec": 0,
+                "SOC": 0,
+                "incidentResponse": 0,
+                "privacy": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0,
+                    "perCustomer": 0,
+                    "fixed": 90000
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}
