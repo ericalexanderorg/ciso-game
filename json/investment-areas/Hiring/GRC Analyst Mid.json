@@ -4,7 +4,7 @@
         "security": {
             "teamCapacity": {
                 "GRC": 5,
-                "Privacy": 0.75
+                "privacy": 0.75
             }
         },
         "business": {
