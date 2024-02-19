@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import data from './data.json'; 
 import './tiles.css'; 
 
-const CompanySelection = () => {
-  const [selectedCompany, setCompany] = useState('');
-
+const CompanySelection = ({ onCompanySelect }) => {
   const handleClick = (companyKey) => {
-    setCompany(companyKey);
+    onCompanySelect(companyKey)
   };
 
   return (
     <div className="tile-container">
-      <h1>Welcome to The CISO Game!</h1>
-      <p>In this game you play the role of a CISO building out a new security</p>
+      <div>
+        <h1>Welcome to The CISO Game!</h1>
+      </div>
+      <div>
+        In this game you play the role of a CISO building out a new security program at a startup.
+      </div>
+      <div>Select the startup you would like to work for</div>
       {Object.entries(data.companies).map(([key, company]) => (
         <div  
           key={key}
-          className={`tile ${selectedCompany === key ? 'selected' : ''}`}
+          className={`tile`}
           onClick={() => handleClick(key)}
         >
           {company.description}

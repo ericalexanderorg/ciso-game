@@ -20,16 +20,8 @@ const App = () => {
     }
   }, [company]);
 
-
-  /*
-  useEffect(() => {
-    fetch('data.json')
-      .then(response => response.json())
-      .then(jsonData => setData(jsonData));
-  }, []);
-  */
-
   const handleCompanySelect = (selectedCompany) => {
+    alert(selectedCompany + "in app.js");
     setCompany(selectedCompany);
   };
 
