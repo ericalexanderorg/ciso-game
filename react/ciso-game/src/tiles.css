@@ -1,0 +1,18 @@
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:  10px;
+  }
+  
+  .tile {
+    padding:  10px;
+    border:  1px solid #ddd;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color  0.3s ease;
+  }
+  
+  .tile.selected {
+    background-color: #f0f0f0;
+    border-color: #007bff;
+  }
