@@ -1,4 +1,3 @@
-// BudgetManagement.js
 import React, { useState } from 'react';
 
 const BudgetManagement = ({ budget, expenses, onExpenseAdd }) => {
