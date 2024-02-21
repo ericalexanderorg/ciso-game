@@ -3,8 +3,9 @@ import data from './data.json';
 import './tiles.css'; 
 
 const CompanySelection = ({ onCompanySelect }) => {
-  const handleClick = (companyKey) => {
-    onCompanySelect(companyKey)
+
+  const handleClick = (companyObject) => {
+    onCompanySelect(companyObject)
   };
 
   return (
@@ -20,7 +21,7 @@ const CompanySelection = ({ onCompanySelect }) => {
         <div  
           key={key}
           className={`tile`}
-          onClick={() => handleClick(key)}
+          onClick={() => handleClick(data.companies[key])}
         >
           {company.description}
         </div>
