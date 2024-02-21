@@ -10,7 +10,11 @@ const Invest = ({ companyObject }) => {
 
   return (
     <div>
-      {companyObject.description}
+      <ul>
+        {companyObject.firstDayPrompts.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
     </div>
   );
 };
