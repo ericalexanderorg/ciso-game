@@ -9,21 +9,35 @@ def create_file_structure_dict(startpath):
             if dir not in data:
                 data[dir] = {}
         for name in files:
-            key = name.split(".")[0]
-            full_path = os.path.join(root, name)
-            parent_dir = os.path.basename(root)
-            if parent_dir not in data:
-                data[parent_dir] = {}
-            f = open(full_path)
-            data[parent_dir][key] = json.load(f)
-
-            print(root)
             parents = root.split("/")
-            print(parents)
+            parents.pop(0) # remove the first directory json
+            #print(parents)
+            #k = data
             for p in parents:
-                if p != "json":
-                    if p not in data:
-                        data[p] = {}
+                print(p)
+                if p not in data:
+                    print("not in")
+                    print(p)
+                    #k[p] = {}
+                    #k = k[p]
+
+            file_key = name.split(".")[0]
+            full_path = os.path.join(root, name)
+            #parent_dir = os.path.basename(root)
+            #if parent_dir not in data:
+            #    data[parent_dir] = {}
+            f = open(full_path)
+            #k[file_key] = json.load(f)
+
+            #print(root)
+            #parents = root.split("/")
+            #print(parents)
+            #k = data
+            #for p in parents:
+            #    if p != "json":
+            #        if p not in k:
+            #            k[p] = {}
+            #            k = k[p]
 
     return data
 
