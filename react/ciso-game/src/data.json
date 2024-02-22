@@ -177,6 +177,7 @@
             "investments": []
         }
     },
+    "investment-areas": {},
     "Product Security": {
         "Bug Bounty": {
             "description": "Bug Bounty on a bug bounty platform - $50,000",

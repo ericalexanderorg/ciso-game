@@ -5,6 +5,9 @@ def create_file_structure_dict(startpath):
     data = {}
 
     for root, dirs, files in os.walk(startpath):
+        for dir in dirs:
+            if dir not in data:
+                data[dir] = {}
         for name in files:
             key = name.split(".")[0]
             full_path = os.path.join(root, name)
@@ -13,6 +16,14 @@ def create_file_structure_dict(startpath):
                 data[parent_dir] = {}
             f = open(full_path)
             data[parent_dir][key] = json.load(f)
+
+            print(root)
+            parents = root.split("/")
+            print(parents)
+            for p in parents:
+                if p != "json":
+                    if p not in data:
+                        data[p] = {}
 
     return data
 
