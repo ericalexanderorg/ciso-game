@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CompanySelection from './SelectCompany';
-import Invest from './SelectInvestments';
+import Invest from './SelectInvestmentArea';
 
 const App = () => {
   const [companyObject, setCompany] = useState(null);
