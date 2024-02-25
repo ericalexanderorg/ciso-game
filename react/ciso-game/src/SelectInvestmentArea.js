@@ -12,10 +12,10 @@ const Invest = ({ companyObject }) => {
   const [capacityProductSecurity, setCapacityProductSecurity] = useState(companyObject.metrics.security.teamCapacity['Product Security']);
   const [capacitySOC, setCapacitySOC] = useState(companyObject.metrics.security.teamCapacity.SOC);
   const [showModal, setShowModal] = useState(false);
-  const [selectedInvestmentArea, setSelectedInvestmentArea] = useState(null);
+  const [selectedInvestmentArea, setSelectedInvestmentArea] = useState('test investment area');
 
   const openModal = (investmentArea) => {
-    //setSelectedInvestmentArea(investmentArea);
+    setSelectedInvestmentArea(investmentArea);
     setShowModal(true);
   };
 
@@ -62,12 +62,18 @@ const Invest = ({ companyObject }) => {
       <p>Select from one of the following areas to invest in:</p>
       
       {Object.entries(data.investments).map(([key, company]) => (
-        <button onClick={openModal}>{key}</button>
+        <button onClick={() => openModal(key)}>{key}</button>
       ))}
 
       {showModal && (
         <Modal onClose={closeModal}>
-          <p>test</p>
+          <p>{selectedInvestmentArea}</p>
+          <p>Select from one of the following options:</p>
+          <ul>
+          {Object.entries(data.investments[selectedInvestmentArea]).map(([key, node]) => (
+            <li>{node.description}</li>
+          ))}
+          </ul>
         </Modal>
       )}
       
