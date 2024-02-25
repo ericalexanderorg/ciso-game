@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Modal from './Modal';
 import data from './data.json'; 
-import Tree from './Tree';
 //import './tiles.css'; 
 
 const Invest = ({ companyObject }) => {  
@@ -11,6 +11,17 @@ const Invest = ({ companyObject }) => {
   const [capacityCorporateSecurity, setCapacityCorporateSecurity] = useState(companyObject.metrics.security.teamCapacity['Corporate Security']);
   const [capacityProductSecurity, setCapacityProductSecurity] = useState(companyObject.metrics.security.teamCapacity['Product Security']);
   const [capacitySOC, setCapacitySOC] = useState(companyObject.metrics.security.teamCapacity.SOC);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedInvestmentArea, setSelectedInvestmentArea] = useState(null);
+
+  const openModal = (investmentArea) => {
+    //setSelectedInvestmentArea(investmentArea);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
   
   function updateRemainingBudget() {
     let employeesEngineering = companyObject.metrics.business.employeesEngineering;
@@ -24,13 +35,6 @@ const Invest = ({ companyObject }) => {
     let remaining = budget - spent;
     setRemainingBudget(remaining); 
   }
-
-
-  const handleClick = (x) => {
-    //onCompanySelect(companyObject)
-    alert(x);
-  };
-
 
   useEffect(() => {
     console.log(companyObject);
@@ -56,21 +60,17 @@ const Invest = ({ companyObject }) => {
       </ul>
       <p></p>
       <p>Select from one of the following areas to invest in:</p>
-      <div>
-        <Tree data={data.investments} />
-      </div>
-
-      {/*
+      
       {Object.entries(data.investments).map(([key, company]) => (
-        <div  
-          key={key}
-          className={`tile`}
-          onClick={() => handleClick(key)}
-        >
-          {key}
-        </div>
+        <button onClick={openModal}>{key}</button>
       ))}
-      */}
+
+      {showModal && (
+        <Modal onClose={closeModal}>
+          <p>test</p>
+        </Modal>
+      )}
+      
     </div>
   );
 };
