@@ -1,0 +1,38 @@
+{
+    "description": "Game Over Test",
+    "firstDayPrompts": [
+        "Game Over Test"
+    ],
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 0,
+                "Corporate Security": 0,
+                "Product Security": 0,
+                "SOC": 0
+            }
+        },
+        "business": {
+            "employeesEngineering": 10,
+            "employeesNonEngineering": 50,
+            "annualSecurityBudget": 500000,
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0,
+                    "perCustomer": 0,
+                    "fixed": 600000
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": 40,
+                    "perNonEngineer": 40
+                }
+            },
+            "customerCount": 100
+        }
+    },
+    "investments": [
+        "Security Policies",
+        "Privacy Policy"
+    ]
+}

@@ -1,5 +1,43 @@
 {
     "companies": {
+        "test": {
+            "description": "Game Over Test",
+            "firstDayPrompts": [
+                "Game Over Test"
+            ],
+            "metrics": {
+                "security": {
+                    "teamCapacity": {
+                        "GRC": 0,
+                        "Corporate Security": 0,
+                        "Product Security": 0,
+                        "SOC": 0
+                    }
+                },
+                "business": {
+                    "employeesEngineering": 10,
+                    "employeesNonEngineering": 50,
+                    "annualSecurityBudget": 500000,
+                    "securityCosts": {
+                        "dollarsAnnually": {
+                            "perEngineer": 0,
+                            "perNonEngineer": 0,
+                            "perCustomer": 0,
+                            "fixed": 600000
+                        },
+                        "timeWeeklyAverage": {
+                            "perEngineer": 40,
+                            "perNonEngineer": 40
+                        }
+                    },
+                    "customerCount": 100
+                }
+            },
+            "investments": [
+                "Security Policies",
+                "Privacy Policy"
+            ]
+        },
         "Jetson Robot": {
             "description": "Jetson Robot. An exciting startup that is uber-izing at home laundry tasks.",
             "firstDayPrompts": [
@@ -620,33 +658,6 @@
                     }
                 }
             },
-            "policies": {
-                "description": "Creating and sharing cyber security policies. $0",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": -2,
-                            "Corporate Security": 0,
-                            "Product Security": 0,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 0
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
             "SOC 2 Type 1 - Security Trust Service Criteria": {
                 "description": "Achieve SOC 2 Type 1 in the security trust service criteria. $150,000",
                 "metrics": {
@@ -719,6 +730,33 @@
                                 "perNonEngineer": 0,
                                 "perCustomer": 0,
                                 "fixed": 10000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Security Policies": {
+                "description": "Creating and sharing cyber security policies. $0",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": -2,
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 0
                             },
                             "timeWeeklyAverage": {
                                 "perEngineer": 0,

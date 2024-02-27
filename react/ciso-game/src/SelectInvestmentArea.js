@@ -3,7 +3,7 @@ import Modal from './Modal';
 import data from './data.json'; 
 
 
-const Invest = ({ companyObject }) => {  
+const Invest = ({ companyObject, onGameOver }) => {  
   const [budget, setBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [spent, setSpent] = useState(0);
   const [investments, setInvestments] = useState([]);
@@ -14,6 +14,7 @@ const Invest = ({ companyObject }) => {
   const [capacitySOC, setCapacitySOC] = useState(companyObject.metrics.security.teamCapacity.SOC);
   const [showModal, setShowModal] = useState(false);
   const [selectedInvestmentArea, setSelectedInvestmentArea] = useState('test investment area');
+
 
   const purchase = (selection) => {
     companyObject.metrics = mergeObjects(companyObject.metrics, data.investments[selectedInvestmentArea][selection].metrics)
@@ -70,6 +71,9 @@ const Invest = ({ companyObject }) => {
     setSpent(spent);
     let remaining = budget - spent;
     setRemainingBudget(remaining); 
+    if (spent >= budget){
+      onGameOver();
+    }
   }
 
   useEffect(() => {
