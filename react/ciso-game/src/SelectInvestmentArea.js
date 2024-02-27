@@ -5,7 +5,7 @@ import data from './data.json';
 
 
 const Invest = ({ companyObject, onGameOver }) => {  
-  const [budget, setBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
+  const [budget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [spent, setSpent] = useState(0);
   const [investments, setInvestments] = useState([]);
   const [remainingBudget, setRemainingBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
@@ -18,16 +18,38 @@ const Invest = ({ companyObject, onGameOver }) => {
 
 
   const purchase = (selection) => {
+    if (!addInvestment(selection)){
+      return;
+    }
+    setShowModal(false);
     companyObject.metrics = mergeObjects(companyObject.metrics, data.investments[selectedInvestmentArea][selection].metrics)
-    updateRemainingBudget();
     setCapacityGRC(companyObject.metrics.security.teamCapacity.GRC);
     setCapacityCorporateSecurity(companyObject.metrics.security.teamCapacity['Corporate Security']);
     setCapacityProductSecurity(companyObject.metrics.security.teamCapacity['Product Security']);
     setCapacitySOC(companyObject.metrics.security.teamCapacity.SOC);
-    setShowModal(false);
+    setSpent(calculateSpent(companyObject.metrics));
+    setRemainingBudget(budget - spent); 
+    if (spent >= budget){
+      onGameOver(companyObject);
+    }
   };
 
-  function mergeObjects(obj1, obj2) {
+  const addInvestment = (investment) => {
+    if (companyObject.investments.find(element => element === investment)){
+      alert(investment + " already purchased. Choose another investment");
+      return false;
+    }
+    companyObject.investments.push(investment)
+    setInvestments(companyObject.investments);
+    return true;
+  };
+
+  const removeLastInvestment = () => {
+    companyObject.investments.pop();
+    setInvestments(companyObject.investments);
+  };
+
+  const mergeObjects = (obj1, obj2) => {
     const backup = obj1;
     const result = {};
 
@@ -38,6 +60,7 @@ const Invest = ({ companyObject, onGameOver }) => {
             } else if (typeof obj1[key] === 'number' && typeof obj2[key] === 'number') {
                 let r = obj1[key] + obj2[key];
                 if (r < 0){
+                  removeLastInvestment();
                   alert('Your team does not have enough ' + key + ' capacity to service this request. You will need to hire before purchasing');
                   return backup;
                 }
@@ -50,7 +73,7 @@ const Invest = ({ companyObject, onGameOver }) => {
         }
     }
     return result;
-  }
+  };
 
   const openModal = (investmentArea) => {
     setSelectedInvestmentArea(investmentArea);
@@ -60,20 +83,6 @@ const Invest = ({ companyObject, onGameOver }) => {
   const closeModal = () => {
     setShowModal(false);
   };
-  
-  function updateRemainingBudget() {
-    setSpent(calculateSpent(companyObject.metrics));
-    let remaining = budget - spent;
-    setRemainingBudget(remaining); 
-    if (spent >= budget){
-      onGameOver();
-    }
-  }
-
-  useEffect(() => {
-    //console.log(companyObject);
-  }, [companyObject]);
-
 
   return (
     <div>
@@ -84,7 +93,11 @@ const Invest = ({ companyObject, onGameOver }) => {
       <p>Budget remaining: {remainingBudget}</p>
       <p></p>
       <p>You have invested in:</p>
-      <p></p>
+      <ul>
+        {investments.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
       <p>Your team has the following hours a week capacity in these areas (hire to increase):</p>
       <ul>
         <li>GRC: {capacityGRC}</li>

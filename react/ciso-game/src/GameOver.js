@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { calculateSpent } from './Spent';
-import data from './data.json'; 
-//import './tiles.css'; 
 
-const GameOver = ({ CompanyObject }) => {
+const GameOver = ({ companyObject }) => {
   const [grade, setGrade] = useState('A+');
   const [withinBudget, setWithinBudget] = useState('No');
   const [hasSecurityPolicies, setHasSecurityPolicies] = useState('No');
@@ -15,22 +13,18 @@ const GameOver = ({ CompanyObject }) => {
 
 
   useEffect(() => {
-    console.log('started')
-
-    CompanyObject = data.companies.test;
-    
     let score = 100;
 
     // Within 10% of the budget?
-    if (calculateSpent(CompanyObject.metrics) <= (CompanyObject.metrics.business.annualSecurityBudget * 0.1) + CompanyObject.metrics.business.annualSecurityBudget) {
-      setWithinBudget = 'Yes';
+    if (calculateSpent(companyObject.metrics) <= (companyObject.metrics.business.annualSecurityBudget * 0.1) + companyObject.metrics.business.annualSecurityBudget) {
+      setWithinBudget('Yes');
     }
     else {
       score -= 10;
     }
 
     // Invested in security policies?
-    if (Object.values(CompanyObject.investments).includes("Security Policies")){
+    if (Object.values(companyObject.investments).includes("Security Policies")){
       setHasSecurityPolicies('Yes');
     }
     else {
@@ -38,7 +32,7 @@ const GameOver = ({ CompanyObject }) => {
     }
 
     // Invested in a privacy policy?
-    if (Object.values(CompanyObject.investments).includes("Privacy Policy")){
+    if (Object.values(companyObject.investments).includes("Privacy Policy")){
       setHasPrivacyPolicy('Yes');
     }
     else {
@@ -46,7 +40,7 @@ const GameOver = ({ CompanyObject }) => {
     }
 
     // Has GRC Capacity?
-    if (CompanyObject.metrics.security.teamCapacity.GRC > 0) {
+    if (companyObject.metrics.security.teamCapacity.GRC > 0) {
       setHasGRCCapacity('Yes');
     }
     else {
@@ -54,7 +48,7 @@ const GameOver = ({ CompanyObject }) => {
     }
 
     // Has Corporate Security Capacity?
-    if (CompanyObject.metrics.security.teamCapacity['Corporate Security'] > 0) {
+    if (companyObject.metrics.security.teamCapacity['Corporate Security'] > 0) {
       setHasCorporateSecurityCapacity('Yes');
     }
     else {
@@ -62,7 +56,7 @@ const GameOver = ({ CompanyObject }) => {
     }
 
     // Has Product Security Capacity?
-    if (CompanyObject.metrics.security.teamCapacity['Product Security'] > 0) {
+    if (companyObject.metrics.security.teamCapacity['Product Security'] > 0) {
       setHasProductSecurityCapacity('Yes');
     }
     else {
@@ -70,7 +64,7 @@ const GameOver = ({ CompanyObject }) => {
     }
 
     // Has SOC Capacity?
-    if (CompanyObject.metrics.security.teamCapacity['SOC'] > 0) {
+    if (companyObject.metrics.security.teamCapacity['SOC'] > 0) {
       setHasSOCCapacity('Yes');
     }
     else {
@@ -102,7 +96,7 @@ const GameOver = ({ CompanyObject }) => {
       setGrade('F')
     }
 
-  }); 
+  }, [companyObject]); 
 
   return (
     <div className="tile-container">

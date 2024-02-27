@@ -11,17 +11,17 @@ const App = () => {
     setCompany(selectedCompany);
   };
 
-  const handleGameOver = () => {
+  const handleGameOver = (companyObject) => {
+    setCompany(companyObject);
     setGameOver(true);
   }
 
   return (
     <div>
-      {/*
+
       {!companyObject && <CompanySelection onCompanySelect={handleCompanySelect} />}
       {!gameOver && companyObject && <Invest companyObject={companyObject} onGameOver={handleGameOver} />}   
-  */} 
-      {!gameOver && <GameOver companyObject={companyObject} />}  
+      {gameOver && companyObject && <GameOver companyObject={companyObject} />}  
     </div>
   );
 };
