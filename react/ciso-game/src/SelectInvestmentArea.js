@@ -62,7 +62,7 @@ const Invest = ({ companyObject, onGameOver }) => {
   };
   
   function updateRemainingBudget() {
-    setSpent(calculateSpent(metrics));
+    setSpent(calculateSpent(companyObject.metrics));
     let remaining = budget - spent;
     setRemainingBudget(remaining); 
     if (spent >= budget){
