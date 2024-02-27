@@ -6,6 +6,7 @@ import data from './data.json';
 const Invest = ({ companyObject }) => {  
   const [budget, setBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [spent, setSpent] = useState(0);
+  const [investments, setInvestments] = useState([]);
   const [remainingBudget, setRemainingBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [capacityGRC, setCapacityGRC] = useState(companyObject.metrics.security.teamCapacity.GRC);
   const [capacityCorporateSecurity, setCapacityCorporateSecurity] = useState(companyObject.metrics.security.teamCapacity['Corporate Security']);
@@ -13,6 +14,46 @@ const Invest = ({ companyObject }) => {
   const [capacitySOC, setCapacitySOC] = useState(companyObject.metrics.security.teamCapacity.SOC);
   const [showModal, setShowModal] = useState(false);
   const [selectedInvestmentArea, setSelectedInvestmentArea] = useState('test investment area');
+
+  const purchase = (selection) => {
+    companyObject.metrics = mergeObjects(companyObject.metrics, data.investments[selectedInvestmentArea][selection].metrics)
+    updateRemainingBudget();
+    setCapacityGRC(companyObject.metrics.security.teamCapacity.GRC);
+    setCapacityCorporateSecurity(companyObject.metrics.security.teamCapacity['Corporate Security']);
+    setCapacityProductSecurity(companyObject.metrics.security.teamCapacity['Product Security']);
+    setCapacitySOC(companyObject.metrics.security.teamCapacity.SOC);
+    setShowModal(false);
+  };
+
+  function mergeObjects(obj1, obj2) {
+    const backup = obj1;
+    const result = {};
+
+    for (let key in obj1) {
+        if (obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)) {
+            if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
+                result[key] = mergeObjects(obj1[key], obj2[key]); 
+            } else if (typeof obj1[key] === 'number' && typeof obj2[key] === 'number') {
+                if (obj1[key] === 0 && obj2[key] < 0){
+                  //alert('Your team does not have enough' + key + 'capacity to service this request. You will need to hire before purchasing');
+                }
+                let r = obj1[key] + obj2[key];
+                //console.log(key)
+                //console.log(obj1[key] + "+" + obj2[key] + "=" + r);
+                if (r < 0){
+                  alert('Your team does not have enough ' + key + ' capacity to service this request. You will need to hire before purchasing');
+                  return backup;
+                }
+                else {
+                  result[key] = r;
+                }
+            } 
+        } else {
+            result[key] = obj1[key];
+        }
+    }
+    return result;
+  }
 
   const openModal = (investmentArea) => {
     setSelectedInvestmentArea(investmentArea);
@@ -30,14 +71,14 @@ const Invest = ({ companyObject }) => {
     let costPerNonEngineer = companyObject.metrics.business.securityCosts.dollarsAnnually.perNonEngineer;
     let fixedCost = companyObject.metrics.business.securityCosts.dollarsAnnually.fixed;
     let budget = companyObject.metrics.business.annualSecurityBudget;
-    let spent = ((employeesEngineering + costPerEngineer) + (employeesNonEngineering + costPerNonEngineer) + fixedCost);
+    let spent = (employeesEngineering * costPerEngineer) + (employeesNonEngineering * costPerNonEngineer) + fixedCost;
     setSpent(spent);
     let remaining = budget - spent;
     setRemainingBudget(remaining); 
   }
 
   useEffect(() => {
-    console.log(companyObject);
+    //console.log(companyObject);
   }, [companyObject]);
 
 
@@ -69,11 +110,13 @@ const Invest = ({ companyObject }) => {
         <Modal onClose={closeModal}>
           <p>{selectedInvestmentArea}</p>
           <p>Select from one of the following options:</p>
-          <ul>
-          {Object.entries(data.investments[selectedInvestmentArea]).map(([key, node]) => (
-            <li>{node.description}</li>
-          ))}
-          </ul>
+
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            {Object.entries(data.investments[selectedInvestmentArea]).map(([key, node]) => (
+              <button onClick={() => purchase(key)}>{node.description}</button>
+            ))}
+          </div>
+
         </Modal>
       )}
       

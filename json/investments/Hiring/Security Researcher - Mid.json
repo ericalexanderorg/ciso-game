@@ -3,7 +3,7 @@
     "metrics": {
         "security": {
             "teamCapacity": {
-                "prodSec": 0.25
+                "Product Security": 0.25
             }
         },
         "business": {

@@ -1,14 +1,12 @@
 {
-    "description": "Hire a consulting firm to review your business, applicable regulatory (GDPR/CCPA) requirements, and privacy operations - $100,000", 
+    "description": "Work with legal to create and publish a privacy policy on all public sites. $0", 
     "metrics": {
         "security": {
             "teamCapacity": {
                 "GRC": -0.1,
-                "corpSec": 0,
-                "prodSec": 0,
-                "SOC": 0,
-                "incidentResponse": 0,
-                "privacy": -0.2
+                "Corporate Security": 0,
+                "Product Security": 0,
+                "SOC": 0
             }
         },
         "business": {
@@ -17,7 +15,7 @@
                     "perEngineer": 0,
                     "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 100000
+                    "fixed": 0
                 },
                 "timeWeeklyAverage": {
                     "perEngineer": 0,

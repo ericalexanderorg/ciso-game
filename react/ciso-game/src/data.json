@@ -1,76 +1,4 @@
 {
-    "whammies": {
-        "c - xss vuln": {
-            "description": "A security researcher responsibly disclosed a reflected XSS in your platform that could impact privileged users.",
-            "choices": [
-                {
-                    "description": "Thank the researcher and carry on.",
-                    "impact": "On a CVSS scale, this rated as a CVSS 2. It's nearly impossible to exploit and has no confidentiality or integrity impact. It has a low availability impact. You lucked out."
-                },
-                {
-                    "description": "Tell the engineering team that owns this area that this is a drop everything. Needs to be fixed ASAP.",
-                    "impact": "The CTO is fed up with all your drop everything requests and gives the CEO an ultimatum: Either you're fired or they quit.",
-                    "gameOver": true
-                }
-            ]
-        },
-        "d - outsourced engineering": {
-            "description": "It's a challenging software engineering hiring market. The CTO wants to bring in globally sourced software engineering contractors with BYOD devices.",
-            "choices": [
-                {
-                    "description": "The the CTO absolutely not. You don't have the necessary secure access solutions in place and you don't have the budget or capcity to implement.",
-                    "impact": "TBD"
-                },
-                {
-                    "description": "You don't want to upset the CTO, so you go along with \"trying\" it.",
-                    "impact": "It turns out one of the contractors hired was really a North Korean nation state hacker who promptly encrypts all company data for a ransom.",
-                    "gameOver": true
-                }
-            ]
-        },
-        "e - privacy ops": {
-            "description": "Legal is asking for your help establishing a data deletion capability to meet California regulatory requirements.",
-            "choices": [
-                {
-                    "description": "Tell them this isn't a security issue and even if it was, you're already behind on the projects to you comitted to.",
-                    "impact": "Legal isn't happy with your response, but ultimately agrees and will work with the customer service department to find a solution."
-                },
-                {
-                    "description": "Agree and select a security project to put on the back burner.",
-                    "impact": "This choice impacts work related to reaching SOX compliance and now the CEO isn't happy because IPO readiness dates are slipping.",
-                    "gameOver": true
-                }
-            ]
-        },
-        "b - unpatched servers": {
-            "description": "Engineering is falling behind on patching their EC2 instances based on CTO guidance to focus on shipping features.",
-            "choices": [
-                {
-                    "description": "Do nothing. It's not worth upsetting the CTO and maybe the CEO.",
-                    "impact": "All of your data has been encrypted by a ransomware bot that exploited common vulnerabilities.",
-                    "gameOver": true
-                },
-                {
-                    "description": "Give the CTO an ultimatum: Patch or EC2 instances behind on 30 days of critical patches will be shut down.",
-                    "impact": "The CTO grumbles, but agrees to keep up with all critical patches installed within 90 days of release and/or it's a drop everything patch event at your direction (ie Log4J like event)."
-                }
-            ]
-        },
-        "a - exposed s3 bucket": {
-            "description": "Your team has recieved an email from a proton address suggesting you have an exposed S3 bucket. All objects in the bucket are accessible via anonymous requests.",
-            "choices": [
-                {
-                    "description": "Do nothing. We get reports like this. It's mostly security researchers looking for an easy reward.",
-                    "impact": "It turns out there was customer data in that bucket that led to a breach and a total cost of $9 million for the company, and there was no budget to cover.",
-                    "gameOver": true
-                },
-                {
-                    "description": "Stop everything and review, but it _could_ impact both your project deliverable and/or other team's project/product delivarables.",
-                    "impact": "The bucket had static website data (images, javascript, etc) for a public site. Nothing to worry about"
-                }
-            ]
-        }
-    },
     "companies": {
         "Jetson Robot": {
             "description": "Jetson Robot. An exciting startup that is uber-izing at home laundry tasks.",
@@ -181,11 +109,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -1,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -1,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -210,11 +136,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -0.5,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -0.5,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -239,11 +163,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -0.5,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -0.5,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -268,11 +190,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -0.25,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -0.25,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -297,11 +217,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -3,
-                            "SOC": 0,
-                            "incidentResponse": -0.25,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -3,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -326,11 +244,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -3,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -3,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -355,11 +271,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -1,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -1,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -384,11 +298,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": -0.5,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": -0.5,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -415,11 +327,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": -5,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": -5,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -444,11 +354,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": -0.5,
-                            "prodSec": 0,
-                            "SOC": -0.25,
-                            "incidentResponse": -0.5,
-                            "privacy": 0
+                            "Corporate Security": -0.5,
+                            "Product Security": 0,
+                            "SOC": -0.25
                         }
                     },
                     "business": {
@@ -473,11 +381,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": -1,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": -1,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -502,11 +408,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": -0.4,
-                            "prodSec": 0,
-                            "SOC": -0.1,
-                            "incidentResponse": -0.4,
-                            "privacy": 0
+                            "Corporate Security": -0.4,
+                            "Product Security": 0,
+                            "SOC": -0.1
                         }
                     },
                     "business": {
@@ -531,11 +435,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": -2,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": -2,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -560,11 +462,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": -0.5,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": -0.5,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -589,11 +489,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": -0.5,
-                            "prodSec": 0,
-                            "SOC": -0.25,
-                            "incidentResponse": -0.5,
-                            "privacy": 0
+                            "Corporate Security": -0.5,
+                            "Product Security": 0,
+                            "SOC": -0.25
                         }
                     },
                     "business": {
@@ -614,17 +512,42 @@
             }
         },
         "GRC": {
+            "Privacy Policy": {
+                "description": "Work with legal to create and publish a privacy policy on all public sites. $0",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": -0.1,
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 0
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
             "IR Service Retainer": {
                 "description": "IR Service Retainer. $40,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -649,11 +572,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": -1,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -678,11 +599,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": -2,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -707,11 +626,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": -2,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -736,11 +653,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": -10,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -759,17 +674,42 @@
                     }
                 }
             },
+            "Privacy Consultation": {
+                "description": "Hire a consulting firm to review your business, applicable regulatory (GDPR/CCPA) requirements, and privacy operations - $100,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": -0.1,
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 100000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
             "Cyber Insurance": {
                 "description": "Purchase cyber insurance. $10,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -796,11 +736,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": -0.1,
-                            "incidentResponse": -0.1,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": -0.1
                         }
                     },
                     "business": {
@@ -825,11 +763,9 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": -7,
-                            "incidentResponse": -1,
-                            "privacy": 0
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": -7
                         }
                     },
                     "business": {
@@ -849,73 +785,13 @@
                 }
             }
         },
-        "Privacy": {
-            "Public Privacy Policy": {
-                "description": "Work with legal to create and publish a privacy policy on all public sites. $0",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": -0.1,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": -0.1
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 0
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Privacy Consultation": {
-                "description": "Hire a consulting firm to review your business, applicable regulatory (GDPR/CCPA) requirements, and privacy operations - $100,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": -0.1,
-                            "corpSec": 0,
-                            "prodSec": 0,
-                            "SOC": 0,
-                            "incidentResponse": 0,
-                            "privacy": -0.2
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 100000
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            }
-        },
         "Hiring": {
             "Cloud Security Engineer - Mid": {
                 "description": "Cloud Security Engineer - Mid - $125,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 1
+                            "Product Security": 1
                         }
                     },
                     "business": {
@@ -932,8 +808,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "GRC": 5,
-                            "privacy": 0.75
+                            "GRC": 5
                         }
                     },
                     "business": {
@@ -950,7 +825,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "corpSec": 0.25,
+                            "Corporate Security": 0.25,
                             "SOC": 2
                         }
                     },
@@ -968,7 +843,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 1
+                            "Product Security": 1
                         }
                     },
                     "business": {
@@ -985,7 +860,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 5
+                            "Product Security": 5
                         }
                     },
                     "business": {
@@ -1002,7 +877,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "corpSec": 1,
+                            "Corporate Security": 1,
                             "SOC": 7
                         }
                     },
@@ -1020,7 +895,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 0.25
+                            "Product Security": 0.25
                         }
                     },
                     "business": {
@@ -1038,9 +913,8 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 1,
-                            "corpSec": 5,
-                            "SOC": 5,
-                            "incidentResponse": 5
+                            "Corporate Security": 5,
+                            "SOC": 5
                         }
                     },
                     "business": {
@@ -1057,7 +931,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 2
+                            "Product Security": 2
                         }
                     },
                     "business": {
@@ -1087,9 +961,8 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 5,
-                            "corpSec": 5,
-                            "SOC": 5,
-                            "incidentResponse": 5
+                            "Corporate Security": 5,
+                            "SOC": 5
                         }
                     },
                     "business": {
@@ -1106,8 +979,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "GRC": 7,
-                            "privacy": 1
+                            "GRC": 7
                         }
                     },
                     "business": {
@@ -1124,8 +996,8 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "corpSec": 0.5,
-                            "prodSec": 0.5
+                            "Corporate Security": 0.5,
+                            "Product Security": 0.5
                         }
                     },
                     "business": {
@@ -1142,8 +1014,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "GRC": 2,
-                            "privacy": 0.5
+                            "GRC": 2
                         }
                     },
                     "business": {
@@ -1161,9 +1032,8 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 1,
-                            "corpSec": 1,
-                            "SOC": 1,
-                            "incidentResponse": 1
+                            "Corporate Security": 1,
+                            "SOC": 1
                         }
                     },
                     "business": {
@@ -1180,7 +1050,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 2
+                            "Product Security": 2
                         }
                     },
                     "business": {
@@ -1197,8 +1067,8 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "corpSec": 0.25,
-                            "prodSec": 0.25
+                            "Corporate Security": 0.25,
+                            "Product Security": 0.25
                         }
                     },
                     "business": {
@@ -1215,7 +1085,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 7
+                            "Product Security": 7
                         }
                     },
                     "business": {
@@ -1244,7 +1114,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 1
+                            "Product Security": 1
                         }
                     },
                     "business": {
@@ -1261,7 +1131,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "corpSec": 0.5,
+                            "Corporate Security": 0.5,
                             "SOC": 5
                         }
                     },
@@ -1280,9 +1150,8 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0.25,
-                            "corpSec": 1,
-                            "SOC": 1,
-                            "incidentResponse": 1
+                            "Corporate Security": 1,
+                            "SOC": 1
                         }
                     },
                     "business": {
@@ -1300,9 +1169,8 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 2,
-                            "corpSec": 2,
-                            "SOC": 2,
-                            "incidentResponse": 2
+                            "Corporate Security": 2,
+                            "SOC": 2
                         }
                     },
                     "business": {
@@ -1319,7 +1187,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 1
+                            "Product Security": 1
                         }
                     },
                     "business": {
@@ -1336,7 +1204,7 @@
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "prodSec": 1
+                            "Product Security": 1
                         }
                     },
                     "business": {
@@ -1354,9 +1222,8 @@
                     "security": {
                         "teamCapacity": {
                             "GRC": 0.5,
-                            "corpSec": 2,
-                            "SOC": 2,
-                            "incidentResponse": 2
+                            "Corporate Security": 2,
+                            "SOC": 2
                         }
                     },
                     "business": {

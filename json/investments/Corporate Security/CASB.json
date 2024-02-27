@@ -4,11 +4,9 @@
         "security": {
             "teamCapacity": {
                 "GRC": 0,
-                "corpSec": -1,
-                "prodSec": 0,
-                "SOC": 0,
-                "incidentResponse": 0,
-                "privacy": 0
+                "Corporate Security": -1,
+                "Product Security": 0,
+                "SOC": 0
             }
         },
         "business": {

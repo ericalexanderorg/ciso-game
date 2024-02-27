@@ -4,9 +4,8 @@
         "security": {
             "teamCapacity": {
                 "GRC": 1,
-                "corpSec": 1,
-                "SOC": 1,
-                "incidentResponse": 1
+                "Corporate Security": 1,
+                "SOC": 1
             }
         },
         "business": {
