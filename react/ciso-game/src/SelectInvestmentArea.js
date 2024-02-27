@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
 import data from './data.json'; 
-//import './tiles.css'; 
+
 
 const Invest = ({ companyObject }) => {  
   const [budget, setBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
@@ -34,12 +34,7 @@ const Invest = ({ companyObject }) => {
             if (typeof obj1[key] === 'object' && typeof obj2[key] === 'object') {
                 result[key] = mergeObjects(obj1[key], obj2[key]); 
             } else if (typeof obj1[key] === 'number' && typeof obj2[key] === 'number') {
-                if (obj1[key] === 0 && obj2[key] < 0){
-                  //alert('Your team does not have enough' + key + 'capacity to service this request. You will need to hire before purchasing');
-                }
                 let r = obj1[key] + obj2[key];
-                //console.log(key)
-                //console.log(obj1[key] + "+" + obj2[key] + "=" + r);
                 if (r < 0){
                   alert('Your team does not have enough ' + key + ' capacity to service this request. You will need to hire before purchasing');
                   return backup;
