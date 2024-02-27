@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
+import { calculateSpent } from './Spent';
 import data from './data.json'; 
 
 
@@ -61,14 +62,7 @@ const Invest = ({ companyObject, onGameOver }) => {
   };
   
   function updateRemainingBudget() {
-    let employeesEngineering = companyObject.metrics.business.employeesEngineering;
-    let employeesNonEngineering = companyObject.metrics.business.employeesNonEngineering;
-    let costPerEngineer = companyObject.metrics.business.securityCosts.dollarsAnnually.perEngineer;
-    let costPerNonEngineer = companyObject.metrics.business.securityCosts.dollarsAnnually.perNonEngineer;
-    let fixedCost = companyObject.metrics.business.securityCosts.dollarsAnnually.fixed;
-    let budget = companyObject.metrics.business.annualSecurityBudget;
-    let spent = (employeesEngineering * costPerEngineer) + (employeesNonEngineering * costPerNonEngineer) + fixedCost;
-    setSpent(spent);
+    setSpent(calculateSpent(metrics));
     let remaining = budget - spent;
     setRemainingBudget(remaining); 
     if (spent >= budget){

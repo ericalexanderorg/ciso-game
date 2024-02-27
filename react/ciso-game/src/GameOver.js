@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { calculateSpent } from './Spent';
 import data from './data.json'; 
 //import './tiles.css'; 
 
@@ -19,6 +20,14 @@ const GameOver = ({ CompanyObject }) => {
     CompanyObject = data.companies.test;
     
     let score = 100;
+
+    // Within 10% of the budget?
+    if (calculateSpent(CompanyObject.metrics) <= (CompanyObject.metrics.business.annualSecurityBudget * 0.1) + CompanyObject.metrics.business.annualSecurityBudget) {
+      setWithinBudget = 'Yes';
+    }
+    else {
+      score -= 10;
+    }
 
     // Invested in security policies?
     if (Object.values(CompanyObject.investments).includes("Security Policies")){
@@ -113,7 +122,7 @@ const GameOver = ({ CompanyObject }) => {
         <li>Product Security Capacity: {hasProductSecurityCapacity}</li>
       </ul>
       <div>
-        You get a {grade}
+        Your grade is {grade} based on your investment choices.
       </div>
     </div>
   );
