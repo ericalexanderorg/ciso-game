@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { calculateSpent } from './Spent';
+import Spent from './Spent';
 
 const GameOver = ({ companyObject }) => {
   const [grade, setGrade] = useState('A+');
@@ -16,7 +16,7 @@ const GameOver = ({ companyObject }) => {
     let score = 100;
 
     // Within 10% of the budget?
-    if (calculateSpent(companyObject.metrics) <= (companyObject.metrics.business.annualSecurityBudget * 0.1) + companyObject.metrics.business.annualSecurityBudget) {
+    if (Spent(companyObject.metrics) <= (companyObject.metrics.business.annualSecurityBudget * 0.1) + companyObject.metrics.business.annualSecurityBudget) {
       setWithinBudget('Yes');
     }
     else {

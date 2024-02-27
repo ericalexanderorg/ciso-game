@@ -10,4 +10,4 @@ const calculateSpent = (metrics) => {
     return (employeesEngineering * costPerEngineer) + (employeesNonEngineering * costPerNonEngineer) + fixedCost;
 };
 
-export calculateSpent;
+export default calculateSpent;
