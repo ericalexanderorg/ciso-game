@@ -1,19 +1,33 @@
-.tile-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap:  10px;
-  }
-  
-  .tile {
-    padding:  10px;
-    border:  1px solid #ddd;
-    cursor: pointer;
-    user-select: none;
-    transition: background-color  0.3s ease;
-  }
-  
-  .tile.selected {
-    background-color: #f0f0f0;
-    border-color: #007bff;
-  }
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+
+.title-tile {
+  grid-column: span 1;
+}
+
+.objective-tile {
+  grid-column: span 1;
+}
+
+.additional-detail-tile {
+  grid-column: span 1;
+}
+
+.budget-tile {
+  grid-column: span 1;
+}
+
+.capacity-tile {
+  grid-column: span 1;
+}
+
+.select-list-tile {
+  grid-column: span 1;
+}
+
+.list-tile {
+  grid-column: span 1;
+}

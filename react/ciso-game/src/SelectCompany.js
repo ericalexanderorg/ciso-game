@@ -9,23 +9,24 @@ const CompanySelection = ({ onCompanySelect }) => {
   };
 
   return (
-    <div className="tile-container">
-      <div>
-        <h1>Welcome to The CISO Game!</h1>
-      </div>
-      <div>
+    <div className="company-selection">
+      <h2>Welcome to The CISO Game!</h2>
+      <p>
         In this game you play the role of a CISO building out a new security program at a startup.
+      </p>
+      <p>Select the startup you would like to work for</p>
+      <div className="company-list">
+        {Object.entries(data.companies).map(([key, company]) => (
+          <div  
+            key={key}
+            className={"company-item"}
+            onClick={() => handleClick(data.companies[key])}
+          >
+            {company.description}
+          </div>
+        
+        ))}
       </div>
-      <div>Select the startup you would like to work for</div>
-      {Object.entries(data.companies).map(([key, company]) => (
-        <div  
-          key={key}
-          className={`tile`}
-          onClick={() => handleClick(data.companies[key])}
-        >
-          {company.description}
-        </div>
-      ))}
     </div>
   );
 };

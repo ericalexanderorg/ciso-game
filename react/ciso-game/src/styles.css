@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company-selection {
+    text-align: center;
+  }
+  
+  .company-item {
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .company-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .company-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .budget-allocation {
+    text-align: center;
+  }
+  
+  .investment-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .investment-item {
+    margin: 10px;
+  }
+  
+  .grade-display {
+    text-align: center;
+    margin-top: 20px;
+  }
+  

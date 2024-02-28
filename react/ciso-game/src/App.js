@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CompanySelection from './SelectCompany';
 import Invest from './SelectInvestmentArea';
 import GameOver from './GameOver';
+import './styles.css';
 
 const App = () => {
   const [companyObject, setCompany] = useState(null);
@@ -17,8 +18,7 @@ const App = () => {
   }
 
   return (
-    <div>
-
+    <div className="app">
       {!companyObject && <CompanySelection onCompanySelect={handleCompanySelect} />}
       {!gameOver && companyObject && <Invest companyObject={companyObject} onGameOver={handleGameOver} />}   
       {gameOver && companyObject && <GameOver companyObject={companyObject} />}  

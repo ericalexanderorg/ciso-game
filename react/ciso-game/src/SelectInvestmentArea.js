@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal';
 import Spent from './Spent';
+import BudgetBar from './BudgetBar';
 import data from './data.json'; 
 
 
 const Invest = ({ companyObject, onGameOver }) => {  
   const [budget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [spent, setSpent] = useState(0);
-  const [investments, setInvestments] = useState([]);
+  const [investments, setInvestments] = useState(['Nothing yet']);
   const [remainingBudget, setRemainingBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [capacityGRC, setCapacityGRC] = useState(companyObject.metrics.security.teamCapacity.GRC);
   const [capacityCorporateSecurity, setCapacityCorporateSecurity] = useState(companyObject.metrics.security.teamCapacity['Corporate Security']);
@@ -86,32 +87,53 @@ const Invest = ({ companyObject, onGameOver }) => {
   };
 
   return (
-    <div>
-      {companyObject.firstDayPrompts.map((item) => (
-        <p>{item}</p>
-      ))}
-      <p>Budget spent: {spent}</p>
-      <p>Budget remaining: {remainingBudget}</p>
-      <p></p>
-      <p>You have invested in:</p>
-      <ul>
-        {investments.map((item) => (
-          <li>{item}</li>
+    <div className="tiles">
+      <div className="title-tile">
+          <h2>Welcome to {companyObject.description}</h2>
+      </div>
+      <div className="objective-tile">
+          <p>Your objectives for the year are:</p>
+          <ol>
+              {companyObject.prompts.priorities.map((priority) => (
+              <li>{priority}</li>
+              ))}
+          </ol>
+      </div>
+        <div className="detail-tile">
+        <p>Additional detail that may help with your investment choices:</p>
+        <ul>
+            {companyObject.prompts.additionalDetail.map((priority) => (
+            <li>{priority}</li>
+            ))}
+        </ul>
+      </div>
+      <div className="budget-tile">
+        <BudgetBar totalBudget={budget} budgetSpent={spent} />
+      </div>
+      <div className="investments-tile">
+        <p>You have invested in:</p>
+        <ul>
+          {investments.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="capacity-tile">
+        <p>Your team has the following hours a week capacity in these areas (hire to increase):</p>
+        <ul>
+          <li>GRC: {capacityGRC}</li>
+          <li>Corporate Security: {capacityCorporateSecurity}</li>
+          <li>Product Security: {capacityProductSecurity}</li>
+          <li>SOC: {capacitySOC}</li>
+        </ul>
+      </div>
+      <div className="select-area">
+        <p>Select from one of the following areas to invest in:</p>
+        
+        {Object.entries(data.investments).map(([key, company]) => (
+          <button style={{ padding: '10px 20px', margin: '5px' }} onClick={() => openModal(key)}>{key}</button>
         ))}
-      </ul>
-      <p>Your team has the following hours a week capacity in these areas (hire to increase):</p>
-      <ul>
-        <li>GRC: {capacityGRC}</li>
-        <li>Corporate Security: {capacityCorporateSecurity}</li>
-        <li>Product Security: {capacityProductSecurity}</li>
-        <li>SOC: {capacitySOC}</li>
-      </ul>
-      <p></p>
-      <p>Select from one of the following areas to invest in:</p>
-      
-      {Object.entries(data.investments).map(([key, company]) => (
-        <button onClick={() => openModal(key)}>{key}</button>
-      ))}
+      </div>
 
       {showModal && (
         <Modal onClose={closeModal}>

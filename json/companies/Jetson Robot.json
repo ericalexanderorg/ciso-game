@@ -1,24 +1,20 @@
 {
     "description": "Jetson Robot. An exciting startup that is uber-izing at home laundry tasks.",
-    "firstDayPrompts": [
-        "Welcome to Jetson Robot, we're so excited to have you.",
-        "",
-        "",
-        "We operate a online marketplace to hire gig workers to come into your home and do laundry for you.",
-        "There's a new competitor that's starting up. It's very important we outpace their ability to ship marketplace features.",
-        "",
-        "Your highest priorities this year are to:",
-        "    1. Reduce friction points related to customer security questionaires",
-        "    2. Make sure we're IPO ready.",
-        "    3. The board wants to make sure \"we're secure\".",
-        "",
-        "Some things about Jetson Robot that should help you invest your budget:",
-        "    * We are cloud native and run everything in AWS",
-        "    * Our coding language of choice is Go",
-        "    * We currently have 100 customers",
-        "    * We currently have 10 engineering and 50 non-engineering employees.",
-        "    * We prefer SAAS over open source solutions."
-    ],
+    "prompts": {
+        "companyDetail": "We operate a online marketplace to hire gig workers to come into your home and do laundry for you. There's a new competitor that's starting up. It's very important we outpace their ability to ship marketplace features.",
+        "priorities": [
+            "Reduce friction points related to servicing customer security questions",
+            "Make sure we're IPO ready",
+            "Ensure the board we have best in class security"
+        ],
+        "additionalDetail": [
+            "We are cloud native and run everything in AWS",
+            "Our coding language of choice is Go",
+            "We currently have 100 customers",
+            "We currently have 10 engineering and 50 non-engineering employees.",
+            "We prefer SAAS over open source solutions."
+        ]
+    },
     "metrics": {
         "security": {
             "teamCapacity": {

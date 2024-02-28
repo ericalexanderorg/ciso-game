@@ -1,64 +1,22 @@
 {
     "companies": {
-        "test": {
-            "description": "Game Over Test",
-            "firstDayPrompts": [
-                "Game Over Test"
-            ],
-            "metrics": {
-                "security": {
-                    "teamCapacity": {
-                        "GRC": 1,
-                        "Corporate Security": 0,
-                        "Product Security": 0,
-                        "SOC": 0
-                    }
-                },
-                "business": {
-                    "employeesEngineering": 10,
-                    "employeesNonEngineering": 50,
-                    "annualSecurityBudget": 500000,
-                    "securityCosts": {
-                        "dollarsAnnually": {
-                            "perEngineer": 0,
-                            "perNonEngineer": 0,
-                            "perCustomer": 0,
-                            "fixed": 600000
-                        },
-                        "timeWeeklyAverage": {
-                            "perEngineer": 40,
-                            "perNonEngineer": 40
-                        }
-                    },
-                    "customerCount": 100
-                }
-            },
-            "investments": [
-                "Security Policies",
-                "Privacy Policy"
-            ]
-        },
         "Jetson Robot": {
             "description": "Jetson Robot. An exciting startup that is uber-izing at home laundry tasks.",
-            "firstDayPrompts": [
-                "Welcome to Jetson Robot, we're so excited to have you.",
-                "",
-                "",
-                "We operate a online marketplace to hire gig workers to come into your home and do laundry for you.",
-                "There's a new competitor that's starting up. It's very important we outpace their ability to ship marketplace features.",
-                "",
-                "Your highest priorities this year are to:",
-                "    1. Reduce friction points related to customer security questionaires",
-                "    2. Make sure we're IPO ready.",
-                "    3. The board wants to make sure \"we're secure\".",
-                "",
-                "Some things about Jetson Robot that should help you invest your budget:",
-                "    * We are cloud native and run everything in AWS",
-                "    * Our coding language of choice is Go",
-                "    * We currently have 100 customers",
-                "    * We currently have 10 engineering and 50 non-engineering employees.",
-                "    * We prefer SAAS over open source solutions."
-            ],
+            "prompts": {
+                "companyDetail": "We operate a online marketplace to hire gig workers to come into your home and do laundry for you. There's a new competitor that's starting up. It's very important we outpace their ability to ship marketplace features.",
+                "priorities": [
+                    "Reduce friction points related to servicing customer security questions",
+                    "Make sure we're IPO ready",
+                    "Ensure the board we have best in class security"
+                ],
+                "additionalDetail": [
+                    "We are cloud native and run everything in AWS",
+                    "Our coding language of choice is Go",
+                    "We currently have 100 customers",
+                    "We currently have 10 engineering and 50 non-engineering employees.",
+                    "We prefer SAAS over open source solutions."
+                ]
+            },
             "metrics": {
                 "security": {
                     "teamCapacity": {
@@ -91,23 +49,20 @@
         },
         "Open Sesame": {
             "description": "Open Sesame. An exciting startup using AI to help employees navigate the maze of access requests.",
-            "firstDayPrompts": [
-                "Open Sesame, we're so excited to have you.",
-                "",
-                "We're developing a LLM based AI solution that will significantly reduce friction related to employee access requests.",
-                "The platform will integrate with all the popular Identity & SSO solutions.",
-                "",
-                "Your highest priorities this year are to:",
-                "    1. Our CTO wants to make sure \"we're building security in\".",
-                "    2. Our CEO wants to eliminate any blockers related to security.",
-                "",
-                "Some things about Open Sesame. that should help you invest your budget:",
-                "    * We are cloud native and run everything in GCP",
-                "    * Our coding language of choice is Rust",
-                "    * We currently have 5 customers",
-                "    * We currently have 50 engineering and 10 non-engineering employees.",
-                "    * We prefer SAAS over open source solutions."
-            ],
+            "prompts": {
+                "companyDetail": "We're developing a LLM based AI solution that will significantly reduce friction related to employee access requests. The platform will integrate with all the popular Identity & SSO solutions.",
+                "priorities": [
+                    "Our CTO wants to make sure \"we're building security in\".",
+                    "Our CEO wants to eliminate any blockers related to security."
+                ],
+                "additionalDetail": [
+                    "We are cloud native and run everything in GCP",
+                    "Our coding language of choice is Rust",
+                    "We currently have 5 customers",
+                    "We currently have 50 engineering and 10 non-engineering employees.",
+                    "We prefer SAAS over open source solutions."
+                ]
+            },
             "metrics": {
                 "security": {
                     "teamCapacity": {
@@ -140,124 +95,16 @@
         }
     },
     "investments": {
-        "Product Security": {
-            "Bug Bounty": {
-                "description": "Bug Bounty on a bug bounty platform - $50,000",
+        "SOC": {
+            "Outsourced SOC": {
+                "description": "Outsourced SOC. $200,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
                             "Corporate Security": 0,
-                            "Product Security": -1,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 50000
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": -0.5,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "SAST Scanner": {
-                "description": "Purchase a SAAS based SAST scanner solution. $30/engineer",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": 0,
-                            "Product Security": -0.5,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 30,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 0
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": -0.5,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Annual Pentesting": {
-                "description": "Purchase an annual pentesting solution. $50,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": 0,
-                            "Product Security": -0.5,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 50000
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": -0.25,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Network Vulnerability Scanner": {
-                "description": "Network vulnerability scanner - $50,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": 0,
-                            "Product Security": -0.25,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 50000
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": -0.25,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Cloud Security Posture Management": {
-                "description": "Purchase a Cloud Security Posture Management SAAS solution. $200,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": 0,
-                            "Product Security": -3,
-                            "SOC": 0
+                            "Product Security": 0,
+                            "SOC": -0.1
                         }
                     },
                     "business": {
@@ -269,49 +116,22 @@
                                 "fixed": 200000
                             },
                             "timeWeeklyAverage": {
-                                "perEngineer": -0.25,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Dependency Analysis": {
-                "description": "Dependency Analysis - $100,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": 0,
-                            "Product Security": -3,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
                                 "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 100000
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": -0.5,
                                 "perNonEngineer": 0
                             }
                         }
                     }
                 }
             },
-            "WAF": {
-                "description": "Purchase a WAF. $50,000",
+            "SEIM": {
+                "description": "Purchase a SAAS based SEIM solution. $50,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
                             "Corporate Security": 0,
-                            "Product Security": -1,
-                            "SOC": 0
+                            "Product Security": 0,
+                            "SOC": -7
                         }
                     },
                     "business": {
@@ -323,34 +143,7 @@
                                 "fixed": 50000
                             },
                             "timeWeeklyAverage": {
-                                "perEngineer": -0.1,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Secret Scanner": {
-                "description": "Purchase a secret scanner solution. $10/engineer",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": 0,
-                            "Product Security": -0.5,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 10,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 0
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": -0.1,
+                                "perEngineer": 0,
                                 "perNonEngineer": 0
                             }
                         }
@@ -359,15 +152,15 @@
             }
         },
         "Corporate Security": {
-            "SSO": {
-                "description": "A SSO/IDP solution. $75 per internal user (employee/contractor/etc).",
+            "XDR": {
+                "description": "XDR on computers. $75/computer.",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "Corporate Security": -5,
+                            "Corporate Security": -0.5,
                             "Product Security": 0,
-                            "SOC": 0
+                            "SOC": -0.25
                         }
                     },
                     "business": {
@@ -386,22 +179,49 @@
                     }
                 }
             },
-            "EDR": {
-                "description": "EDR on computers. $50/computer.",
+            "Device Management": {
+                "description": "Device Management to force secure configs on all endpoint devices - $50/computer.",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
                             "Corporate Security": -0.5,
                             "Product Security": 0,
-                            "SOC": -0.25
+                            "SOC": 0
                         }
                     },
                     "business": {
                         "securityCosts": {
                             "dollarsAnnually": {
-                                "perEngineer": 50,
-                                "perNonEngineer": 50,
+                                "perEngineer": 20,
+                                "perNonEngineer": 20,
+                                "perCustomer": 0,
+                                "fixed": 0
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "SSO": {
+                "description": "A SSO/IDP solution. $75 per internal user (employee/contractor/etc).",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": -5,
+                            "Product Security": 0,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 75,
+                                "perNonEngineer": 75,
                                 "perCustomer": 0,
                                 "fixed": 0
                             },
@@ -440,33 +260,6 @@
                     }
                 }
             },
-            "AV": {
-                "description": "AV on computers. $10/computer.",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": -0.4,
-                            "Product Security": 0,
-                            "SOC": -0.1
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 10,
-                                "perNonEngineer": 10,
-                                "perCustomer": 0,
-                                "fixed": 0
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": -1,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
             "Secure Access Solution": {
                 "description": "A secure access solution that enables zero trust - $50/computer.",
                 "metrics": {
@@ -494,35 +287,35 @@
                     }
                 }
             },
-            "Device Management": {
-                "description": "Device Management to force secure configs on all endpoint devices - $50/computer.",
+            "AV": {
+                "description": "AV on computers. $10/computer.",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
-                            "Corporate Security": -0.5,
+                            "Corporate Security": -0.4,
                             "Product Security": 0,
-                            "SOC": 0
+                            "SOC": -0.1
                         }
                     },
                     "business": {
                         "securityCosts": {
                             "dollarsAnnually": {
-                                "perEngineer": 20,
-                                "perNonEngineer": 20,
+                                "perEngineer": 10,
+                                "perNonEngineer": 10,
                                 "perCustomer": 0,
                                 "fixed": 0
                             },
                             "timeWeeklyAverage": {
-                                "perEngineer": 0,
+                                "perEngineer": -1,
                                 "perNonEngineer": 0
                             }
                         }
                     }
                 }
             },
-            "XDR": {
-                "description": "XDR on computers. $75/computer.",
+            "EDR": {
+                "description": "EDR on computers. $50/computer.",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
@@ -535,8 +328,8 @@
                     "business": {
                         "securityCosts": {
                             "dollarsAnnually": {
-                                "perEngineer": 75,
-                                "perNonEngineer": 75,
+                                "perEngineer": 50,
+                                "perNonEngineer": 50,
                                 "perCustomer": 0,
                                 "fixed": 0
                             },
@@ -550,60 +343,6 @@
             }
         },
         "GRC": {
-            "Privacy Policy": {
-                "description": "Work with legal to create and publish a privacy policy on all public sites. $0",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": -0.1,
-                            "Corporate Security": 0,
-                            "Product Security": 0,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 0
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "IR Service Retainer": {
-                "description": "IR Service Retainer. $40,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": 0,
-                            "Product Security": 0,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 40000
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
             "Trust Center Platform": {
                 "description": "Purchase and implement a trust portal SAAS service. $20,000",
                 "metrics": {
@@ -622,6 +361,60 @@
                                 "perNonEngineer": 0,
                                 "perCustomer": 0,
                                 "fixed": 20000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Cyber Insurance": {
+                "description": "Purchase cyber insurance. $10,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 10000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Privacy Policy": {
+                "description": "Work with legal to create and publish a privacy policy on all public sites. $0",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": -0.1,
+                            "Corporate Security": 0,
+                            "Product Security": 0,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 0
                             },
                             "timeWeeklyAverage": {
                                 "perEngineer": 0,
@@ -685,35 +478,8 @@
                     }
                 }
             },
-            "Privacy Consultation": {
-                "description": "Hire a consulting firm to review your business, applicable regulatory (GDPR/CCPA) requirements, and privacy operations - $100,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": -0.1,
-                            "Corporate Security": 0,
-                            "Product Security": 0,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0,
-                                "perCustomer": 0,
-                                "fixed": 100000
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": 0,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Cyber Insurance": {
-                "description": "Purchase cyber insurance. $10,000",
+            "IR Service Retainer": {
+                "description": "IR Service Retainer. $40,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
@@ -729,7 +495,7 @@
                                 "perEngineer": 0,
                                 "perNonEngineer": 0,
                                 "perCustomer": 0,
-                                "fixed": 10000
+                                "fixed": 40000
                             },
                             "timeWeeklyAverage": {
                                 "perEngineer": 0,
@@ -765,18 +531,16 @@
                         }
                     }
                 }
-            }
-        },
-        "SOC": {
-            "Outsourced SOC": {
-                "description": "Outsourced SOC. $200,000",
+            },
+            "Privacy Consultation": {
+                "description": "Hire a consulting firm to review your business, applicable regulatory (GDPR/CCPA) requirements, and privacy operations - $100,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "GRC": 0,
+                            "GRC": -0.1,
                             "Corporate Security": 0,
                             "Product Security": 0,
-                            "SOC": -0.1
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -785,7 +549,7 @@
                                 "perEngineer": 0,
                                 "perNonEngineer": 0,
                                 "perCustomer": 0,
-                                "fixed": 200000
+                                "fixed": 100000
                             },
                             "timeWeeklyAverage": {
                                 "perEngineer": 0,
@@ -794,16 +558,18 @@
                         }
                     }
                 }
-            },
-            "SEIM": {
-                "description": "Purchase a SAAS based SEIM solution. $50,000",
+            }
+        },
+        "Product Security": {
+            "Annual Pentesting": {
+                "description": "Purchase an annual pentesting solution. $50,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
                             "GRC": 0,
                             "Corporate Security": 0,
-                            "Product Security": 0,
-                            "SOC": -7
+                            "Product Security": -0.5,
+                            "SOC": 0
                         }
                     },
                     "business": {
@@ -815,7 +581,196 @@
                                 "fixed": 50000
                             },
                             "timeWeeklyAverage": {
+                                "perEngineer": -0.25,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Secret Scanner": {
+                "description": "Purchase a secret scanner solution. $10/engineer",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -0.5,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 10,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 0
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.1,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Cloud Security Posture Management": {
+                "description": "Purchase a Cloud Security Posture Management SAAS solution. $200,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -3,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
                                 "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 200000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.25,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "WAF": {
+                "description": "Purchase a WAF. $50,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -1,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 50000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.1,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Dependency Analysis": {
+                "description": "Dependency Analysis - $100,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -3,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 100000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.5,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Bug Bounty": {
+                "description": "Bug Bounty on a bug bounty platform - $50,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -1,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 50000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.5,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "Network Vulnerability Scanner": {
+                "description": "Network vulnerability scanner - $50,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -0.25,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 50000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.25,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "SAST Scanner": {
+                "description": "Purchase a SAAS based SAST scanner solution. $30/engineer",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -0.5,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 30,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 0
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.5,
                                 "perNonEngineer": 0
                             }
                         }
@@ -824,8 +779,8 @@
             }
         },
         "Hiring": {
-            "Cloud Security Engineer - Mid": {
-                "description": "Cloud Security Engineer - Mid - $125,000",
+            "Application Security Engineer - Junior": {
+                "description": "Application Security Engineer - Junior - $95,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
@@ -835,24 +790,7 @@
                     "business": {
                         "securityCosts": {
                             "dollarsAnnually": {
-                                "fixed": 125000
-                            }
-                        }
-                    }
-                }
-            },
-            "GRC Analyst Mid": {
-                "description": "GRC Analyst - Mid Level - $90,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 5
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 90000
+                                "fixed": 95000
                             }
                         }
                     }
@@ -871,312 +809,6 @@
                         "securityCosts": {
                             "dollarsAnnually": {
                                 "fixed": 57000
-                            }
-                        }
-                    }
-                }
-            },
-            "Cloud Security Engineer - Senior": {
-                "description": "Cloud Security Engineer - Senior - $188,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Product Security": 1
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 188000
-                            }
-                        }
-                    }
-                }
-            },
-            "Product Security Engineer - Mid": {
-                "description": "Product Security Engineer - Mid - $135,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Product Security": 5
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 135000
-                            }
-                        }
-                    }
-                }
-            },
-            "SOC Analyst - Senior": {
-                "description": "SOC Analyst - Senior - $133,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Corporate Security": 1,
-                            "SOC": 7
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 133000
-                            }
-                        }
-                    }
-                }
-            },
-            "Security Researcher - Mid": {
-                "description": "Security Researcher - Mid - $90,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Product Security": 0.25
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 90000
-                            }
-                        }
-                    }
-                }
-            },
-            "Network Security Engineer - Senior": {
-                "description": "Network Security Engineer - Senior - $186,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 1,
-                            "Corporate Security": 5,
-                            "SOC": 5
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 186000
-                            }
-                        }
-                    }
-                }
-            },
-            "Application Security Engineer - Senior": {
-                "description": "Application Security Engineer - Senior - $200,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Product Security": 2
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 200000
-                            }
-                        }
-                    }
-                }
-            },
-            "Cyber Security Forensics Specialist - Mid": {
-                "description": "Cyber Security Forensics Specialist - Mid - $54,000",
-                "metrics": {
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 54000
-                            }
-                        }
-                    }
-                }
-            },
-            "IT Security Specialist - Senior": {
-                "description": "IT Security Specialist - Senior - $188,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 5,
-                            "Corporate Security": 5,
-                            "SOC": 5
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 188000
-                            }
-                        }
-                    }
-                }
-            },
-            "GRC Analyst Senior": {
-                "description": "GRC Analyst - Senior - $150,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 7
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 150000
-                            }
-                        }
-                    }
-                }
-            },
-            "Red Team Operator - Mid": {
-                "description": "Red Team Operator - Mid - $100,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Corporate Security": 0.5,
-                            "Product Security": 0.5
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 100000
-                            }
-                        }
-                    }
-                }
-            },
-            "GRC Analyst Junior": {
-                "description": "GRC Analyst - Junior - $56,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 2
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 56000
-                            }
-                        }
-                    }
-                }
-            },
-            "IT Security Specialist - Junior": {
-                "description": "IT Security Specialist - Junior - $68,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 1,
-                            "Corporate Security": 1,
-                            "SOC": 1
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 68000
-                            }
-                        }
-                    }
-                }
-            },
-            "Product Security Engineer - Junior": {
-                "description": "Product Security Engineer - Junior - $95,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Product Security": 2
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 95000
-                            }
-                        }
-                    }
-                }
-            },
-            "Vulnerability Management Analyst - Mid": {
-                "description": "Vulnerability Management Analyst - Mid - $90,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Corporate Security": 0.25,
-                            "Product Security": 0.25
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 90000
-                            }
-                        }
-                    }
-                }
-            },
-            "Product Security Engineer - Senior": {
-                "description": "Product Security Engineer - Senior - $200,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Product Security": 7
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 200000
-                            }
-                        }
-                    }
-                }
-            },
-            "Exploitation Analyst - Mid": {
-                "description": "Exploitation Analyst - Mid - $90,000",
-                "metrics": {
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 90000
-                            }
-                        }
-                    }
-                }
-            },
-            "Application Security Engineer - Junior": {
-                "description": "Application Security Engineer - Junior - $95,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Product Security": 1
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 95000
-                            }
-                        }
-                    }
-                }
-            },
-            "SOC Analyst - Mid": {
-                "description": "SOC Analyst - Mid - $87,000",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "Corporate Security": 0.5,
-                            "SOC": 5
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "fixed": 87000
                             }
                         }
                     }
@@ -1201,6 +833,25 @@
                     }
                 }
             },
+            "Network Security Engineer - Senior": {
+                "description": "Network Security Engineer - Senior - $186,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 1,
+                            "Corporate Security": 5,
+                            "SOC": 5
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 186000
+                            }
+                        }
+                    }
+                }
+            },
             "IT Security Specialist - Mid": {
                 "description": "IT Security Specialist - Mid - $113,000",
                 "metrics": {
@@ -1215,6 +866,134 @@
                         "securityCosts": {
                             "dollarsAnnually": {
                                 "fixed": 113000
+                            }
+                        }
+                    }
+                }
+            },
+            "Product Security Engineer - Junior": {
+                "description": "Product Security Engineer - Junior - $95,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Product Security": 2
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 95000
+                            }
+                        }
+                    }
+                }
+            },
+            "IT Security Specialist - Junior": {
+                "description": "IT Security Specialist - Junior - $68,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 1,
+                            "Corporate Security": 1,
+                            "SOC": 1
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 68000
+                            }
+                        }
+                    }
+                }
+            },
+            "Red Team Operator - Mid": {
+                "description": "Red Team Operator - Mid - $100,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Corporate Security": 0.5,
+                            "Product Security": 0.5
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 100000
+                            }
+                        }
+                    }
+                }
+            },
+            "Vulnerability Management Analyst - Mid": {
+                "description": "Vulnerability Management Analyst - Mid - $90,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Corporate Security": 0.25,
+                            "Product Security": 0.25
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 90000
+                            }
+                        }
+                    }
+                }
+            },
+            "IT Security Specialist - Senior": {
+                "description": "IT Security Specialist - Senior - $188,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 5,
+                            "Corporate Security": 5,
+                            "SOC": 5
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 188000
+                            }
+                        }
+                    }
+                }
+            },
+            "Network Security Engineer - Mid": {
+                "description": "Network Security Engineer - Mid - $117,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0.5,
+                            "Corporate Security": 2,
+                            "SOC": 2
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 117000
+                            }
+                        }
+                    }
+                }
+            },
+            "SOC Analyst - Senior": {
+                "description": "SOC Analyst - Senior - $133,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Corporate Security": 1,
+                            "SOC": 7
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 133000
                             }
                         }
                     }
@@ -1237,6 +1016,86 @@
                     }
                 }
             },
+            "Product Security Engineer - Mid": {
+                "description": "Product Security Engineer - Mid - $135,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Product Security": 5
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 135000
+                            }
+                        }
+                    }
+                }
+            },
+            "Cloud Security Engineer - Senior": {
+                "description": "Cloud Security Engineer - Senior - $188,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Product Security": 1
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 188000
+                            }
+                        }
+                    }
+                }
+            },
+            "Security Researcher - Mid": {
+                "description": "Security Researcher - Mid - $90,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Product Security": 0.25
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 90000
+                            }
+                        }
+                    }
+                }
+            },
+            "Exploitation Analyst - Mid": {
+                "description": "Exploitation Analyst - Mid - $90,000",
+                "metrics": {
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 90000
+                            }
+                        }
+                    }
+                }
+            },
+            "GRC Analyst Junior": {
+                "description": "GRC Analyst - Junior - $56,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 2
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 56000
+                            }
+                        }
+                    }
+                }
+            },
             "Application Security Engineer - Mid": {
                 "description": "Application Security Engineer - Mid Level - $135,000",
                 "metrics": {
@@ -1254,20 +1113,116 @@
                     }
                 }
             },
-            "Network Security Engineer - Mid": {
-                "description": "Network Security Engineer - Mid - $117,000",
+            "Application Security Engineer - Senior": {
+                "description": "Application Security Engineer - Senior - $200,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
-                            "GRC": 0.5,
-                            "Corporate Security": 2,
-                            "SOC": 2
+                            "Product Security": 2
                         }
                     },
                     "business": {
                         "securityCosts": {
                             "dollarsAnnually": {
-                                "fixed": 117000
+                                "fixed": 200000
+                            }
+                        }
+                    }
+                }
+            },
+            "Product Security Engineer - Senior": {
+                "description": "Product Security Engineer - Senior - $200,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Product Security": 7
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 200000
+                            }
+                        }
+                    }
+                }
+            },
+            "Cloud Security Engineer - Mid": {
+                "description": "Cloud Security Engineer - Mid - $125,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Product Security": 1
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 125000
+                            }
+                        }
+                    }
+                }
+            },
+            "SOC Analyst - Mid": {
+                "description": "SOC Analyst - Mid - $87,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "Corporate Security": 0.5,
+                            "SOC": 5
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 87000
+                            }
+                        }
+                    }
+                }
+            },
+            "GRC Analyst Mid": {
+                "description": "GRC Analyst - Mid Level - $90,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 5
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 90000
+                            }
+                        }
+                    }
+                }
+            },
+            "GRC Analyst Senior": {
+                "description": "GRC Analyst - Senior - $150,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 7
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 150000
+                            }
+                        }
+                    }
+                }
+            },
+            "Cyber Security Forensics Specialist - Mid": {
+                "description": "Cyber Security Forensics Specialist - Mid - $54,000",
+                "metrics": {
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "fixed": 54000
                             }
                         }
                     }

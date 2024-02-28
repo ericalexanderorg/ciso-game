@@ -1,22 +1,19 @@
 {
     "description": "Open Sesame. An exciting startup using AI to help employees navigate the maze of access requests.",
-    "firstDayPrompts": [
-        "Open Sesame, we're so excited to have you.",
-        "",
-        "We're developing a LLM based AI solution that will significantly reduce friction related to employee access requests.",
-        "The platform will integrate with all the popular Identity & SSO solutions.",
-        "",
-        "Your highest priorities this year are to:",
-        "    1. Our CTO wants to make sure \"we're building security in\".",
-        "    2. Our CEO wants to eliminate any blockers related to security.",
-        "",
-        "Some things about Open Sesame. that should help you invest your budget:",
-        "    * We are cloud native and run everything in GCP",
-        "    * Our coding language of choice is Rust",
-        "    * We currently have 5 customers",
-        "    * We currently have 50 engineering and 10 non-engineering employees.",
-        "    * We prefer SAAS over open source solutions."
-    ],
+    "prompts": {
+        "companyDetail": "We're developing a LLM based AI solution that will significantly reduce friction related to employee access requests. The platform will integrate with all the popular Identity & SSO solutions.",
+        "priorities": [
+            "Our CTO wants to make sure \"we're building security in\".",
+            "Our CEO wants to eliminate any blockers related to security."
+        ],
+        "additionalDetail": [
+            "We are cloud native and run everything in GCP",
+            "Our coding language of choice is Rust",
+            "We currently have 5 customers",
+            "We currently have 50 engineering and 10 non-engineering employees.",
+            "We prefer SAAS over open source solutions."
+        ]
+    },
     "metrics": {
         "security": {
             "teamCapacity": {
