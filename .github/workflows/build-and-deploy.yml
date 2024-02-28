@@ -21,7 +21,7 @@ jobs:
         working-directory: react/ciso-game
 
       - name: Build
-        run: npm run build
+        run: npm run build -e ciso-game
         working-directory: react/ciso-game
 
       - name: Upload
