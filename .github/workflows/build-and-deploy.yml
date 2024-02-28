@@ -25,7 +25,7 @@ jobs:
         working-directory: react/ciso-game
 
       - name: Upload
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: react/ciso-game/build
 
