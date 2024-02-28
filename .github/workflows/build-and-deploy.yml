@@ -1,0 +1,42 @@
+name: Build and deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  build: 
+
+    permissions:
+      contents: read
+
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: react/ciso-game
+
+      - name: Build
+        run: npm run build
+        working-directory: react/ciso-game
+
+  deploy:
+    needs: build
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
