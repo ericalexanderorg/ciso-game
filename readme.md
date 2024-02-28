@@ -8,3 +8,5 @@ Some ways I've used this game:
 2. In interviews as a tool to spark conversations and understand a candidates domain knowledge.
 
 The current state of the game is still a little rough around the edges, but you can play it at https://ericalexander.org/ciso-game
+
+.
