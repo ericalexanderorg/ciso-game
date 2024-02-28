@@ -15,13 +15,15 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+        working-directory: react/ciso-game
 
       - name: Build
         run: npm run build
+        working-directory: react/ciso-game
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           BRANCH: gh-pages
-          FOLDER: build
+          FOLDER: react/ciso-game/build
