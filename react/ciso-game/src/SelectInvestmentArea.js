@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modal from './Modal';
 import Spent from './Spent';
 import BudgetBar from './BudgetBar';
@@ -9,7 +9,6 @@ const Invest = ({ companyObject, onGameOver }) => {
   const [budget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [spent, setSpent] = useState(0);
   const [investments, setInvestments] = useState(['Nothing yet']);
-  const [remainingBudget, setRemainingBudget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [capacityGRC, setCapacityGRC] = useState(companyObject.metrics.security.teamCapacity.GRC);
   const [capacityCorporateSecurity, setCapacityCorporateSecurity] = useState(companyObject.metrics.security.teamCapacity['Corporate Security']);
   const [capacityProductSecurity, setCapacityProductSecurity] = useState(companyObject.metrics.security.teamCapacity['Product Security']);
@@ -30,7 +29,6 @@ const Invest = ({ companyObject, onGameOver }) => {
     setCapacitySOC(companyObject.metrics.security.teamCapacity.SOC);
     let s = Spent(companyObject.metrics);
     setSpent(s);
-    setRemainingBudget(budget - s); 
     if (s >= budget){
       onGameOver(companyObject);
     }
