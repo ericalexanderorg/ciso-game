@@ -19,19 +19,33 @@ const Invest = ({ companyObject, onGameOver }) => {
 
   const purchase = (selection) => {
     if (!addInvestment(selection)){
+      // Purchase already made and user notified it was blocked
+      // return before closing the modal
       return;
     }
-    setShowModal(false);
-    companyObject.metrics = mergeObjects(companyObject.metrics, data.investments[selectedInvestmentArea][selection].metrics)
-    setCapacityGRC(companyObject.metrics.security.teamCapacity.GRC);
-    setCapacityCorporateSecurity(companyObject.metrics.security.teamCapacity['Corporate Security']);
-    setCapacityProductSecurity(companyObject.metrics.security.teamCapacity['Product Security']);
-    setCapacitySOC(companyObject.metrics.security.teamCapacity.SOC);
-    let s = Spent(companyObject.metrics);
-    setSpent(s);
-    if (s >= budget){
-      onGameOver(companyObject);
+    
+    // This is hacky 
+    // mergeObjects is recursive and has a check to block negative metrics
+    // it can block anywhere in the recursion, so this try/catch is there for the error to bubble up through the recursion
+    // I'm sure there's a better way, just not interested in figuring it out ATM
+    // this is good enough for now
+    try {
+      companyObject.metrics = mergeObjects(companyObject.metrics, data.investments[selectedInvestmentArea][selection].metrics)
+      setCapacityGRC(companyObject.metrics.security.teamCapacity.GRC);
+      setCapacityCorporateSecurity(companyObject.metrics.security.teamCapacity['Corporate Security']);
+      setCapacityProductSecurity(companyObject.metrics.security.teamCapacity['Product Security']);
+      setCapacitySOC(companyObject.metrics.security.teamCapacity.SOC);
+      let s = Spent(companyObject.metrics);
+      setSpent(s);
+      if (s >= budget){
+        onGameOver(companyObject);
+      }
+      setShowModal(false);
     }
+    catch {
+      removeLastInvestment();
+    }
+    
   };
 
   const addInvestment = (investment) => {
@@ -50,7 +64,6 @@ const Invest = ({ companyObject, onGameOver }) => {
   };
 
   const mergeObjects = (obj1, obj2) => {
-    const backup = obj1;
     const result = {};
 
     for (let key in obj1) {
@@ -60,9 +73,8 @@ const Invest = ({ companyObject, onGameOver }) => {
             } else if (typeof obj1[key] === 'number' && typeof obj2[key] === 'number') {
                 let r = obj1[key] + obj2[key];
                 if (r < 0){
-                  removeLastInvestment();
                   alert('Your team does not have enough ' + key + ' capacity to service this request. You will need to hire before purchasing');
-                  return backup;
+                  throw new Error("Insufficient Capacity")
                 }
                 else {
                   result[key] = r;
