@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Modal from './Modal';
 import Spent from './Spent';
 import BudgetBar from './BudgetBar';
+import ErrorMessage from './ErrorMessage';
 import data from './data.json'; 
 
 
@@ -15,6 +16,7 @@ const Invest = ({ companyObject, onGameOver }) => {
   const [capacitySOC, setCapacitySOC] = useState(companyObject.metrics.security.teamCapacity.SOC);
   const [showModal, setShowModal] = useState(false);
   const [selectedInvestmentArea, setSelectedInvestmentArea] = useState(null);
+  const [error, setError] = useState('');
 
 
   const purchase = (selection) => {
@@ -50,7 +52,7 @@ const Invest = ({ companyObject, onGameOver }) => {
 
   const addInvestment = (investment) => {
     if (companyObject.investments.find(element => element === investment)){
-      alert(investment + " already purchased. Choose another investment");
+      setError(investment + " already purchased. Choose another investment");
       return false;
     }
     companyObject.investments.push(investment)
@@ -73,7 +75,7 @@ const Invest = ({ companyObject, onGameOver }) => {
             } else if (typeof obj1[key] === 'number' && typeof obj2[key] === 'number') {
                 let r = obj1[key] + obj2[key];
                 if (r < 0){
-                  alert('Your team does not have enough ' + key + ' capacity to service this request. You will need to hire before purchasing');
+                  setError('Your team does not have enough ' + key + ' capacity to service this purchase. Hire to increase capacity.');
                   throw new Error("Insufficient Capacity")
                 }
                 else {
@@ -93,6 +95,7 @@ const Invest = ({ companyObject, onGameOver }) => {
   };
 
   const closeModal = () => {
+    setError(null);
     setShowModal(false);
   };
 
@@ -120,6 +123,15 @@ const Invest = ({ companyObject, onGameOver }) => {
       <div className="budget-tile">
         <BudgetBar totalBudget={budget} budgetSpent={spent} />
       </div>
+      <div className="capacity-tile">
+        <p>Your team has the following hours a week capacity in these areas (hire to increase):</p>
+        <ul>
+          <li>GRC: {capacityGRC}</li>
+          <li>Corporate Security: {capacityCorporateSecurity}</li>
+          <li>Product Security: {capacityProductSecurity}</li>
+          <li>SOC: {capacitySOC}</li>
+        </ul>
+      </div>
       <div className="select-area">
         <p>Select from one of the following areas to invest in:</p>
         
@@ -135,19 +147,10 @@ const Invest = ({ companyObject, onGameOver }) => {
           ))}
         </ul>
       </div>
-      <div className="capacity-tile">
-        <p>Your team has the following hours a week capacity in these areas (hire to increase):</p>
-        <ul>
-          <li>GRC: {capacityGRC}</li>
-          <li>Corporate Security: {capacityCorporateSecurity}</li>
-          <li>Product Security: {capacityProductSecurity}</li>
-          <li>SOC: {capacitySOC}</li>
-        </ul>
-      </div>
-
 
       {showModal && (
         <Modal onClose={closeModal}>
+          {error && <ErrorMessage message={error} />}
           <p>{selectedInvestmentArea}</p>
           <p>Select from one of the following options:</p>
 

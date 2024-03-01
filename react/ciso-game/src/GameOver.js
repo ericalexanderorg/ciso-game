@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Spent from './Spent';
+import EssentialItemsGrid from './EssentialItemsGrid';
 
 const GameOver = ({ companyObject }) => {
   const [grade, setGrade] = useState('A+');
@@ -10,14 +11,19 @@ const GameOver = ({ companyObject }) => {
   const [hasCorporateSecurityCapacity, setHasCorporateSecurityCapacity] = useState('No');
   const [hasSOCCapacity, setHasSOCCapacity] = useState('No');
   const [hasProductSecurityCapacity, setHasProductSecurityCapacity] = useState('No');
+  const essentialItems = [
+    { title: 'Within 10% of Budget', explanation: 'The CFO is happy as long as you\'re within 5% of budget.' },
+    { id: 2, title: 'Item 2', explanation: 'Explanation for Item 2' },
+  ];
 
 
   useEffect(() => {
     let score = 100;
 
     // Within 10% of the budget?
-    if (Spent(companyObject.metrics) <= (companyObject.metrics.business.annualSecurityBudget * 0.1) + companyObject.metrics.business.annualSecurityBudget) {
+    if (Spent(companyObject.metrics) <= (companyObject.metrics.business.annualSecurityBudget * 0.05) + companyObject.metrics.business.annualSecurityBudget) {
       setWithinBudget('Yes');
+      companyObject.investments.push('Within 10% of Budget')
     }
     else {
       score -= 10;
@@ -101,20 +107,10 @@ const GameOver = ({ companyObject }) => {
   return (
     <div className="tile-container">
       <div>
-        <h1>You've invested your entire budget!</h1>
+        <h1>Budget invested! Let's see how you did.</h1>
       </div>
-      <div>
-        Let's see how you did. Were you able to purchase all of your need to haves?
-      </div>
-      <ul>
-        <li>Within 10% of your budget: {withinBudget}</li>
-        <li>Security Policies: {hasSecurityPolicies}</li>
-        <li>Privacy Policy: {hasPrivacyPolicy}</li>
-        <li>GRC capacity to service requests: {hasGRCCapacity}</li>
-        <li>Corporate Security Capacity: {hasCorporateSecurityCapacity}</li>
-        <li>SOC Capacity: {hasSOCCapacity}</li>
-        <li>Product Security Capacity: {hasProductSecurityCapacity}</li>
-      </ul>
+      <EssentialItemsGrid essentialItems={essentialItems} selectedItems={companyObject.investments} />
+
       <div>
         Your grade is {grade} based on your investment choices.
       </div>
