@@ -1,5 +1,5 @@
 {
-    "description": "EDR on computers. $50/computer.", 
+    "description": "Endpoint Protection & Response (EDR) on computers. $50/computer.", 
     "metrics": {
         "security": {
             "teamCapacity": {

@@ -8,13 +8,13 @@ import data from './data.json';
 const Invest = ({ companyObject, onGameOver }) => {  
   const [budget] = useState(companyObject.metrics.business.annualSecurityBudget);
   const [spent, setSpent] = useState(0);
-  const [investments, setInvestments] = useState(['Nothing yet']);
+  const [investments, setInvestments] = useState(['None yet!']);
   const [capacityGRC, setCapacityGRC] = useState(companyObject.metrics.security.teamCapacity.GRC);
   const [capacityCorporateSecurity, setCapacityCorporateSecurity] = useState(companyObject.metrics.security.teamCapacity['Corporate Security']);
   const [capacityProductSecurity, setCapacityProductSecurity] = useState(companyObject.metrics.security.teamCapacity['Product Security']);
   const [capacitySOC, setCapacitySOC] = useState(companyObject.metrics.security.teamCapacity.SOC);
   const [showModal, setShowModal] = useState(false);
-  const [selectedInvestmentArea, setSelectedInvestmentArea] = useState('test investment area');
+  const [selectedInvestmentArea, setSelectedInvestmentArea] = useState(null);
 
 
   const purchase = (selection) => {
@@ -120,8 +120,15 @@ const Invest = ({ companyObject, onGameOver }) => {
       <div className="budget-tile">
         <BudgetBar totalBudget={budget} budgetSpent={spent} />
       </div>
+      <div className="select-area">
+        <p>Select from one of the following areas to invest in:</p>
+        
+        {Object.entries(data.investments).map(([key, company]) => (
+          <button style={{ padding: '10px 20px', margin: '5px' }} onClick={() => openModal(key)}>{key}</button>
+        ))}
+      </div>
       <div className="investments-tile">
-        <p>You have invested in:</p>
+        <p>Investments:</p>
         <ul>
           {investments.map((item) => (
             <li>{item}</li>
@@ -137,13 +144,7 @@ const Invest = ({ companyObject, onGameOver }) => {
           <li>SOC: {capacitySOC}</li>
         </ul>
       </div>
-      <div className="select-area">
-        <p>Select from one of the following areas to invest in:</p>
-        
-        {Object.entries(data.investments).map(([key, company]) => (
-          <button style={{ padding: '10px 20px', margin: '5px' }} onClick={() => openModal(key)}>{key}</button>
-        ))}
-      </div>
+
 
       {showModal && (
         <Modal onClose={closeModal}>
@@ -152,7 +153,7 @@ const Invest = ({ companyObject, onGameOver }) => {
 
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             {Object.entries(data.investments[selectedInvestmentArea]).map(([key, node]) => (
-              <button onClick={() => purchase(key)}>{node.description}</button>
+              <button style={{ padding: '10px 20px', margin: '5px' }} onClick={() => purchase(key)}>{node.description}</button>
             ))}
           </div>
 

@@ -1,5 +1,5 @@
 {
-    "description": "Purchase a SAAS based SEIM solution. $50,000", 
+    "description": "Security Information and Event Management (SEIM): $50,000", 
     "metrics": {
         "security": {
             "teamCapacity": {

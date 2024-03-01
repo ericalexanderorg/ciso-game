@@ -1,5 +1,5 @@
 {
-    "description": "Purchase a WAF. $50,000", 
+    "description": "Web Applicaton Firwall (WAF): $50,000", 
     "metrics": {
         "security": {
             "teamCapacity": {

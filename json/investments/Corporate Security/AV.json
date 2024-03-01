@@ -1,5 +1,5 @@
 {
-    "description": "AV on computers. $10/computer.", 
+    "description": "Anti-Virus (AV) on computers: $10/computer.", 
     "metrics": {
         "security": {
             "teamCapacity": {

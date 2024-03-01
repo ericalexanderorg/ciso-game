@@ -1,5 +1,5 @@
 {
-    "description": "Device Management to force secure configs on all endpoint devices - $50/computer.", 
+    "description": "Endpoint Management: $50/computer.", 
     "metrics": {
         "security": {
             "teamCapacity": {

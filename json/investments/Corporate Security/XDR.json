@@ -1,5 +1,5 @@
 {
-    "description": "XDR on computers. $75/computer.", 
+    "description": "Extended Detection & Response (XDR): $75/computer.", 
     "metrics": {
         "security": {
             "teamCapacity": {
