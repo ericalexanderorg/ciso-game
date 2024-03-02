@@ -104,7 +104,7 @@
                             "GRC": 0,
                             "Corporate Security": 0,
                             "Product Security": 0,
-                            "SOC": -0.1
+                            "SOC": 5
                         }
                     },
                     "business": {
@@ -173,33 +173,6 @@
                             },
                             "timeWeeklyAverage": {
                                 "perEngineer": -1,
-                                "perNonEngineer": 0
-                            }
-                        }
-                    }
-                }
-            },
-            "Device Management": {
-                "description": "Endpoint Management: $50/computer.",
-                "metrics": {
-                    "security": {
-                        "teamCapacity": {
-                            "GRC": 0,
-                            "Corporate Security": -0.5,
-                            "Product Security": 0,
-                            "SOC": 0
-                        }
-                    },
-                    "business": {
-                        "securityCosts": {
-                            "dollarsAnnually": {
-                                "perEngineer": 20,
-                                "perNonEngineer": 20,
-                                "perCustomer": 0,
-                                "fixed": 0
-                            },
-                            "timeWeeklyAverage": {
-                                "perEngineer": 0,
                                 "perNonEngineer": 0
                             }
                         }
@@ -308,6 +281,33 @@
                             },
                             "timeWeeklyAverage": {
                                 "perEngineer": -1,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "RMM": {
+                "description": "Remote Monitoring & Management (RMM): $50/computer.",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": -0.5,
+                            "Product Security": 0,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 20,
+                                "perNonEngineer": 20,
+                                "perCustomer": 0,
+                                "fixed": 0
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": 0,
                                 "perNonEngineer": 0
                             }
                         }
@@ -479,7 +479,7 @@
                 }
             },
             "IR Service Retainer": {
-                "description": "IR Service Retainer: $40,000",
+                "description": "Incident Response (IR) Service Retainer: $40,000",
                 "metrics": {
                     "security": {
                         "teamCapacity": {
@@ -744,6 +744,33 @@
                             },
                             "timeWeeklyAverage": {
                                 "perEngineer": -0.5,
+                                "perNonEngineer": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "CSPM": {
+                "description": "Cloud Security Posture Management (CSPM): $100,000",
+                "metrics": {
+                    "security": {
+                        "teamCapacity": {
+                            "GRC": 0,
+                            "Corporate Security": 0,
+                            "Product Security": -0.5,
+                            "SOC": 0
+                        }
+                    },
+                    "business": {
+                        "securityCosts": {
+                            "dollarsAnnually": {
+                                "perEngineer": 0,
+                                "perNonEngineer": 0,
+                                "perCustomer": 0,
+                                "fixed": 100000
+                            },
+                            "timeWeeklyAverage": {
+                                "perEngineer": -0.25,
                                 "perNonEngineer": 0
                             }
                         }
