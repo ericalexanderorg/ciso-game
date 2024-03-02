@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CompanySelection from './SelectCompany';
 import Invest from './SelectInvestmentArea';
 import GameOver from './GameOver';
@@ -16,6 +16,10 @@ const App = () => {
     setCompany(companyObject);
     setGameOver(true);
   }
+
+  useEffect(() => {
+    document.title = "CISO Game";
+  }, []);
 
   return (
     <div className="app">
