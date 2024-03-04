@@ -1,5 +1,5 @@
 {
-    "description": "Open Sesame. An exciting startup using AI to help employees navigate the maze of access requests.",
+    "description": "Accessity Necessity AI. An exciting startup using AI to help employees navigate the maze of access requests.",
     "prompts": {
         "companyDetail": "We're developing a LLM based AI solution that will significantly reduce friction related to employee access requests. The platform will integrate with all the popular Identity & SSO solutions.",
         "priorities": [
