@@ -16,6 +16,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Data ETL
+        run: python3 create_react_json.py
+
       - name: Install Dependencies
         run: npm install
         working-directory: react/ciso-game
