@@ -124,7 +124,7 @@ const Invest = ({ companyObject, onGameOver }) => {
         <BudgetBar totalBudget={budget} budgetSpent={spent} />
       </div>
       <div className="capacity-tile">
-        <p>Your team has the following hours a week capacity in these areas (hire to increase):</p>
+        <p>Your team has the following hours a week of capacity in these areas (hire to increase):</p>
         <ul>
           <li>GRC: {capacityGRC}</li>
           <li>Corporate Security: {capacityCorporateSecurity}</li>

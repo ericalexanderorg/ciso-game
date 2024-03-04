@@ -15,7 +15,7 @@ const GameOver = ({ companyObject }) => {
     { title: 'GRC Capacity', explanation: 'You\'ll need GRC capacity to service assurance & customer security questions, auditing, TPRM, and related work.' },
     { title: 'Corporate Security Capacity', explanation: 'You\'ll need Corporate Security capacity to ensure you have an inventory of endpoint assets, they have AV/EDR/XDR, they\'re encrypted, you have a secure access solution, and more.' },
     { title: 'Product Security Capacity', explanation: 'You\'ll need Product Security capacity to ensure security is built into your product, engineering is keeping up with patching, vulnerabilities are found & fixed, and more.'},
-    { title: 'SOC Capacity', explanation: 'You\'ll need SOC capacity to ensure logs are monitored, threats are contained, and more.' }
+    { title: 'SOC Capacity', explanation: 'You\'ll need SOC capacity to ensure logs are monitored, compromised assets discovered & contained, and more.' }
   ];
 
 
@@ -88,7 +88,7 @@ const GameOver = ({ companyObject }) => {
       <EssentialItemsGrid essentialItems={essentialItems} selectedItems={investments} />
       <div>
         <h1>What about my other investments?</h1>
-        <p>There's a lot of nice-to-haves. Some of them may serve you well IF you covered the essentials first.</p>
+        <p>There's a lot of nice-to-haves. Some of them may serve you well IF you covered the above need to haves first.</p>
       </div>
     </div>
   );
