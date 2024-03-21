@@ -1,0 +1,27 @@
+{
+    "description": "Subject Rights Management Solution: $50,000", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": -0.1,
+                "Corporate Security": 0,
+                "Product Security": 0,
+                "SOC": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0,
+                    "perCustomer": 0,
+                    "fixed": 50000
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": 0,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}
