@@ -1,0 +1,27 @@
+{
+    "description": "Secure Coding Training Platform: $100/year/engineer", 
+    "metrics": {
+        "security": {
+            "teamCapacity": {
+                "GRC": 0,
+                "Corporate Security": 0,
+                "Product Security": -0.25,
+                "SOC": 0
+            }
+        },
+        "business": {
+            "securityCosts": {
+                "dollarsAnnually": {
+                    "perEngineer": 100,
+                    "perNonEngineer": 0,
+                    "perCustomer": 0,
+                    "fixed": 0
+                },
+                "timeWeeklyAverage": {
+                    "perEngineer": -0.1,
+                    "perNonEngineer": 0
+                }
+            }
+        }
+    }
+}
