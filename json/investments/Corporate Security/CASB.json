@@ -1,5 +1,5 @@
 {
-    "description": "Cloud Security Posture Management (CASB): $20/computer.", 
+    "description": "Cloud Access Security Broker (CASB): $20/computer.", 
     "metrics": {
         "security": {
             "teamCapacity": {
