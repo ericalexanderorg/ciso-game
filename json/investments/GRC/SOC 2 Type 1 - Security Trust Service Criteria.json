@@ -1,5 +1,5 @@
 {
-    "description": "Achieve SOC 2 Type 1 in the security trust service criteria: $150,000", 
+    "description": "Achieve SOC 2 Type 1 in the security trust service criteria: $50,000", 
     "metrics": {
         "security": {
             "teamCapacity": {
@@ -15,7 +15,7 @@
                     "perEngineer": 0,
                     "perNonEngineer": 0,
                     "perCustomer": 0,
-                    "fixed": 150000
+                    "fixed": 50000
                 },
                 "timeWeeklyAverage": {
                     "perEngineer": -1,
